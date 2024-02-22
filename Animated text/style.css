@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 100vh;
+    background: #000;
+  }
+  h2 {-webkit-text-stroke: #23d5ab;
+      font-size: 200px;
+      font-family: bebas neue;
+      background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 5s ease-in-out infinite;
+      text-align: center;
+      line-height: 0.9;
+  }
+  h2 span{
+    font-weight: 300;
+    font-size: 163px;
+    display: block;
+  }
+  @keyframes animate{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+  
