@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Number Input</title>
+<style>
+  .digit-input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 0px;
+  }
+</style>
+</head>
+<body>
+
+<form id="phoneForm">
+  <input type="text" id="digit1" class="digit-input" maxlength="1" onkeyup="moveToNext(this, 'digit2')" required>
+  <input type="text" id="digit2" class="digit-input" maxlength="1" onkeyup="moveToNext(this, 'digit3')" required>
+  <input type="text" id="digit3" class="digit-input" maxlength="1" onkeyup="moveToNext(this, 'digit4')" required>
+  <input type="text" id="digit4" class="digit-input" maxlength="1" onkeyup="moveToNext(this, 'digit5')" required>
+  <input type="text" id="digit5" class="digit-input" maxlength="1" onkeyup="moveToNext(this, 'digit6')" required>
+  <input type="text" id="digit6" class="digit-input" maxlength="1" required>
+</form>
+
+<script>
+function moveToNext(currentInput, nextInputId) {
+  if (currentInput.value.length >= 1) {
+    document.getElementById(nextInputId).focus();
+  }
+}
+</script>
+
+</body>
+</html>
