@@ -1,491 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>O.P. Jindal School</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
     <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin-bottom: 20px;
-        padding: 0;
-      }
-
-      span {
-        font-style: italic;
-        font-size: smaller;
-      }
-      .container {
-        width: 800px;
-        height: 100vh;
-      }
-
-      img {
-        margin-left: 65px;
-        float: left;
-      }
-      .title {
-        font-size: 25px;
-        text-align: center;
-        position: relative;
-        top: 10px;
-      }
-      .title span {
-        font-size: 50px;
-        font-weight: bolder;
-        font-style: normal;
-        line-height: normal;
-      }
-      .titlebox {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 5px;
-        width: 230px;
-        text-transform: capitalize;
-        border: 3px solid black;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      .form-no {
-        margin: 10px;
-        padding: 5px;
-        float: right;
-        font-size: 18px;
-      }
-      .profile {
-        text-align: center;
-        margin: 10px;
-        padding: 10px;
-        float: right;
-        width: 125px;
-        height: 140px;
-        border: 2px solid black;
-      }
-      .content {
-        margin: 10px;
-        padding: 10px;
-        font-size: 16px;
-      }
-      .box {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 1px solid black;
-      }
-      input {
-        height: 20px;
-        font-size: 18px;
-        text-align: center;
-        font-family: "Times New Roman", Times, serif;
-        border: none;
-        border-bottom: 1px solid black;
-      }
-      .checkbox {
-        accent-color: black;
-        width: 25px;
-        border-radius: 0;
-        border: none;
-        position: relative;
-        top: 5px;
-      }
-      .radio {
-        accent-color: #000;
-        width: 25px;
-        border: 2px solid black;
-        position: relative;
-        top: 5px;
-      }
-      .digit-input {
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        margin: 0px;
-        border: 1px solid;
-        border-right: none;
-      }
-      .digit-input-last {
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        margin: 0px;
-        border: 1px solid;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="image.png" alt="op jindal" width="180px" /><br />
-      <div class="title">
-        <span> <b>O.P. Jindal School</b></span
-        ><br />
-        Savitri Nagar, Tamnar, Raigarh, C.G. 496108. <br />
-        Affliated to CBSE, New Delhi. Aff. No. 3330096
-      </div>
-      <br /><br /><br />
-      <div class="titlebox">REGISTRATION FORM</div>
-      <div class="form-no">
-        <label for="reg_form">*Registration Form No.</label
-        ><input
-          type="text"
-          name="reg_form"
-          style="width: 180px; margin-right: 10px"
-        />
-      </div>
-      <br /><br />
-      <div class="content">
-        <label for="class">* Class to which Admission is Sought</label>
-        <input type="text" style="width: 110px" />&nbsp;/
-        <input type="text" style="width: 214px" />
-        <div class="profile">
-          Please <br />Affix <br />a <br />Recent <br />
-          Passport Size <br />
-          Colour Photograph of Student Here
-        </div>
-        <span style="margin-left: 275px">In Figures</span>
-        <span style="margin-left: 100px">In words</span>
-        <br />
-        <i
-          >Please register the name of my child/ ward for admission in your
-          school</i
-        ><br /><br /><label for="s_name">* Student's Name</label>
-        <input type="text" style="width: 471px" />
-        <span style="margin-left: 200px">First</span>
-        <span style="margin-left: 100px">Middle</span>
-        <span style="margin-left: 100px">Last</span><br /><br />
-        <label for="sex">* Sex:</label>
-        <label for="">Male</label>
-        <input
-          type="radio"
-          name="sex"
-          id="male"
-          value="Male"
-          class="radio"
-          checked
-        />
-        <label for="">Female</label>
-        <input
-          type="radio"
-          name="sex"
-          id="female"
-          value="Female"
-          class="radio"
-        />
-        &nbsp; <label for="age">Age as on <b> 01-04-2021</b></label>
-        <input type="text" name="age" style="width: 227px" />
-        <span style="margin-left: 405px">Years</span>
-        <span style="margin-left: 17px">Months</span>
-        <span style="margin-left: 17px">Days</span><br />
-        <label for="dob">* Date of Birth</label>
-        <input type="text" name="dob" style="width: 120px" />/<input
-          type="text"
-          name="dob"
-          style="width: 350px"
-        /><br />
-        <span style="margin-left: 130px">In Figures</span>
-        <span style="margin-left: 250px">In words</span> <br /><br />
-        <label for="aadhar">* Student's Aadhar No</label>
-        <input
-          type="text"
-          id="digit1"
-          class="digit-input"
-          maxlength="1"
-          onkeyup="moveToNext(this, 'digit2')"
-          required
-        /><input
-          type="text"
-          id="digit2"
-          class="digit-input"
-          maxlength="1"
-          onkeyup="moveToNext(this, 'digit3')"
-          required
-        /><input
-          type="text"
-          id="digit3"
-          class="digit-input"
-          maxlength="1"
-          onkeyup="moveToNext(this, 'digit4')"
-          required
-        /><input
-          type="text"
-          id="digit4"
-          class="digit-input"
-          maxlength="1"
-          onkeyup="moveToNext(this, 'digit5')"
-          required
-        /><input
-          type="text"
-          id="digit5"
-          class="digit-input"
-          maxlength="1"
-          onkeyup="moveToNext(this, 'digit6')"
-          required
-        /><input
-          type="text"
-          id="digit6"
-          class="digit-input"
-          onkeyup="moveToNext(this, 'digit7')"
-          maxlength="1"
-          required
-        /><input
-          type="text"
-          id="digit7"
-          class="digit-input"
-          onkeyup="moveToNext(this, 'digit8')"
-          maxlength="1"
-          required
-        /><input
-          type="text"
-          id="digit8"
-          class="digit-input"
-          onkeyup="moveToNext(this, 'digit9')"
-          maxlength="1"
-          required
-        /><input
-          type="text"
-          id="digit9"
-          class="digit-input"
-          onkeyup="moveToNext(this, 'digit10')"
-          maxlength="1"
-          required
-        /><input
-          type="text"
-          id="digit10"
-          class="digit-input"
-          onkeyup="moveToNext(this, 'digit11')"
-          maxlength="1"
-          required
-        /><input
-          type="text"
-          id="digit11"
-          class="digit-input"
-          onkeyup="moveToNext(this, 'digit12')"
-          maxlength="1"
-          required
-        /><input
-          type="text"
-          id="digit12"
-          class="digit-input-last"
-          maxlength="1"
-          required
-        />
-        <br /><br />
-        <label for="s_name">* Name of the Previous School</label>
-        <input type="text" style="width: 552px" /><br /><br />
-        <label for="board">* Board of Previous School:</label>&nbsp;
-        <label for="">CBSE</label>
-        <input
-          type="radio"
-          name="board"
-          id="cbse"
-          value="CBSE"
-          class="radio"
-          checked
-        />&nbsp;
-        <label for="">CGBSE</label>
-        <input
-          type="radio"
-          name="board"
-          id="cgbse"
-          value="CGBSE"
-          class="radio"
-        />&nbsp; Other &nbsp;<input type="text" style="width: 340px" />
-        <br /><br />
-        <label for="language"
-          >* Medium of Instruction in the Previous School:</label
-        >&nbsp;
-        <label for="">English</label>
-        <input
-          type="radio"
-          name="language"
-          id="english"
-          value="english"
-          class="radio"
-          checked
-        />&nbsp;
-        <label for="">Hindi</label>
-        <input
-          type="radio"
-          name="language"
-          id="hindi"
-          value="hindi"
-          class="radio"
-        />&nbsp; Other &nbsp;<input type="text" style="width: 218px" />
-        <span style="margin-left: 625px">Please Specify</span><br /><br />
-        <label for="cocc"
-          >* Co-Curricular Activities that the Student has Participated
-        </label>
-        <input type="text" style="width: 374px" /><br /><br />
-        <label for="games">* Games in which the Student is Proficient </label>
-        <input type="text" style="width: 477px" name="games" /><br /><br />
-        <label for="nation">* Nationality</label>
-        <input type="text" style="width: 250px" name="nation" />
-        <label for="caste">* Caste:</label>&nbsp;
-        <label for="gen">General</label>
-        <input
-          type="radio"
-          name="caste"
-          id="gen"
-          value="gen"
-          class="radio"
-          checked
-        />&nbsp;
-        <label for="sc">SC</label>
-        <input
-          type="radio"
-          name="caste"
-          id="sc"
-          value="sc"
-          class="radio"
-        />&nbsp;
-        <label for="st">ST</label>
-        <input
-          type="radio"
-          name="caste"
-          id="st"
-          value="st"
-          class="radio"
-        />&nbsp;
-        <label for="obc">OBC</label>
-        <input
-          type="radio"
-          name="caste"
-          id="obc"
-          value="obc"
-          class="radio"
-        />&nbsp;<br /><br />
-        <label for="f_name">* Father's Name</label>
-        <input type="text" style="width: 647px" name="f_name" />
-        <span style="margin-left: 220px">First</span>
-        <span style="margin-left: 150px">Middle</span>
-        <span style="margin-left: 150px">Last</span><br />
-        <label for="cat">* Category:</label>&nbsp;
-        <label for="JPL">JPL</label>
-        <input
-          type="radio"
-          name="cat"
-          id="JPL"
-          value="JPL"
-          class="radio"
-          checked
-        />&nbsp;
-        <label for="SMS">SMS</label>
-        <input
-          type="radio"
-          name="cat"
-          id="SMS"
-          value="SMS"
-          class="radio"
-        />&nbsp;
-        <label for="OPKSKS">OPKSKS</label>
-        <input
-          type="radio"
-          name="cat"
-          id="OPKSKS"
-          value="OPKSKS"
-          class="radio"
-        />&nbsp;
-        <label for="OPJS">OPJS</label>
-        <input
-          type="radio"
-          name="cat"
-          id="OPJS"
-          value="OPJS"
-          class="radio"
-        />&nbsp;
-        <label for="DCPP">DCPP</label>
-        <input
-          type="radio"
-          name="cat"
-          id="DCPP"
-          value="DCPP"
-          class="radio"
-        />&nbsp;
-        <label for="JSPL">JSPL Mines</label>
-        <input
-          type="radio"
-          name="cat"
-          id="JSPL"
-          value="JSPL"
-          class="radio"
-        />&nbsp;
-        <br />
-        <label for="JPL-Security" style="margin-left: 80px">JPL Security</label>
-        <input
-          type="radio"
-          name="cat"
-          id="JPL-Security"
-          value="JPL-Security"
-          class="radio"
-        />&nbsp;
-        <label for="JSPL-Security">JSPL Security</label>
-        <input
-          type="radio"
-          name="cat"
-          id="JSPL-Security"
-          value="JSPL-Security"
-          class="radio"
-        />&nbsp;
-        <label for="Non-JPL">Non-JPL</label>
-        <input
-          type="radio"
-          name="cat"
-          id="Non-JPL"
-          value="Non-JPL"
-          class="radio"
-        />&nbsp;
-        <label for="emp-code">Employee Code</label>
-        <input type="text" name="emp-code" style="width: 205px" /><br /><br />
-        <label for="religion">* Religion</label>
-        <input type="text" name="religion" style="width: 200px" />
-        <label for="email">Email Id</label>
-        <input type="email" name="email" style="width: 417px" />
-        <br /><br />
-        <label for="m_name">* Mother's Name</label>
-        <input type="text" style="width: 641px" name="m_name" />
-        <span style="margin-left: 230px">First</span>
-        <span style="margin-left: 150px">Middle</span>
-        <span style="margin-left: 150px">Last</span><br />
-        <label for="oA">* Office Address </label>
-        <input type="text" style="width: 643px" name="oA" /><br />
-        <br />
-        <label for="rA">* Residential Address </label>
-        <input type="text" style="width: 612px" name="rA" /><br /><br />
-        <label for="phone1">* Phone(R)</label>
-        <input type="tel" name="phone1" style="width: 170px" />
-        <label for="phone2">Phone(O)</label>
-        <input type="tel" name="phone2" style="width: 170px" />
-        <label for="mobile">Mobile</label>
-        <input type="tel" name="mobile" style="width: 206px" /><br /><br />
-        <label for="aA">* Annual Income of the Parents </label>
-        <input type="text" style="width: 549px" name="aA" />
-        <p>
-          I understand and agree that the registration of my child/ward does not
-          guarantee admission to the school and that the registration fee is
-          neither transferrable nor refundable.
-        </p>
-        <br />
-        Date
-        <span
-          style="
-            float: right;
-            margin-right: 30px;
-            font-style: normal;
-            font-size: inherit;
-          "
-          >Signature</span
-        >
-      </div>
-    </div>
-    <script>
-      function moveToNext(currentInput, nextInputId) {
-        if (currentInput.value.length >= 1) {
-          document.getElementById(nextInputId).focus();
+        .container{
+            width: 800px;
+            margin-left: 30px;
+            background-color: whitesmoke;
         }
-      }
-    </script>
-  </body>
+        .title{
+            background-color: rgba(127, 85, 19, 0.626);
+            height: 125px;
+            font-style: normal;
+            padding: 30px;
+        }
+        .Work{
+            font-size: large;
+            color: rgba(119, 103, 13, 0.829);
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <strong style="font-size: x-large;"> B.Rohith</strong>
+            <img src="image.png" alt="Profile picture" style="float: right;height: 125px;width: auto;">
+            <div style="border: 1px transparent  rgba(127, 85, 19, 0.626);width: 550px;">
+                <p>A high school graduate aiming to study at University of Mango to gain insightful and
+                    cutting-edged FinTech knowledge at a top-tier university while making use of strong
+                </p>
+                <table style="width: 550px;margin-top: 35px;">
+                    <tr>
+                        <td>+91-8185929110</td><td>brohith24@gmail.com</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <p class="Work">
+                <b>Work Experience</b>
+            </p>
+            <p style="margin-left: 70px;">
+                <b>Software Intern at Microsoft</b>
+            </p>
+            <p style="color: grey;margin-left: 70px;">
+                2024 summer
+            </p>
+            <ul style="margin-left: 80px;list-style-type: square;">
+                <li>Worked on many software cnetric projects</li>
+                <li style="margin-top: 10px;">Intern of the summer</li>
+            </ul>
+            <p style="margin-left: 70px;">
+                <b>Software Devloper at Apple</b>
+            </p>
+            <p style="color: grey;margin-left: 70px;">
+                2025 summer
+            </p>
+            <ul style="margin-left: 80px;list-style-type: square;">
+                <li>Worked on IOS Development</li>
+                <li style="margin-top: 10px;">Youngest Intern at Apple</li>
+            </ul>
+            <p class="Work">
+                <b>Education</b>
+            </p>
+            <p style="margin-left: 70px;">
+                <b>Chaitanya Bharathi Institute of Technology</b>
+            </p>
+            <p style="color: grey;margin-left: 70px;">
+                <B style="margin-left: 15px;">CGPA : 9.55</B><br>
+            </p>
+            <span style="margin-left: 90px;margin-top: 5px;color: grey;"> 2022-2026</span>
+            <p style="margin-left: 70px;">
+                <b>Narayana Junior College</b>
+            </p>
+            <p style="color: grey;margin-left: 70px;">
+                <B style="margin-left: 15px;">Percentage : 97%</B><br>
+            </p>
+            <span style="margin-left: 90px;margin-top: 5px;color: grey;"> 2020-2022</span>
+            <p style="margin-left: 70px;">
+                <b>Narayana High school</b>
+            </p>
+            <p style="color: grey;margin-left: 70px;">
+                <B style="margin-left: 15px;">Percentage : 100%</B><br>
+            </p>
+            <span style="margin-left: 90px;margin-top: 5px;color: grey;"> 2019-2020</span>
+            <p class="Work">
+                <b>ExtraCurricular Activities</b>
+            </p>
+            <p style="margin-left: 30px;color: grey;">
+                <b style="color: #000;">Cancer Campaign</b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Participated in Cancer Campaignled by Red Cross in 2022
+                <br>
+                2022&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;July
+            </p>
+           
+            <p style="margin-left: 30px;color: grey;">
+                <b style="color: #000;">National Level Cricket</b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Participated in U19 World cup;
+                <br>
+                2025&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;July
+            </p>
+        </div>
+        <p class="Work">
+            <b>Skills & Interests</b>
+        </p>
+        <div class="adjust">
+            <table class="Skills">
+                <tr>
+                    <th style="width: 50%;">Soft Skills</th>
+                    <th style="width:50%;">Hard Skills</th>
+                    <th style="width: 50%;">Interests</th>
+                </tr>
+                <tr>
+                    <td><hr>
+                        <ul>
+                            <li>DBMS</li>
+                            <LI>DS</LI>
+                            <li>CSS</li>
+                            <li>JAVA</li>
+                        </ul>
+                    </td>
+                    <td><hr>
+                        <ul>
+                            <li>Communication</li>
+                            <li>Leadership</li>
+                            <li>Team-Work</li>
+                            <li>Consistent</li>
+                        </ul>
+                    </td>
+                    <td><hr>
+                        <ul>
+                            <li>Cricket</li>
+                            <li>Coding</li>
+                            <li>Gaming</li>
+                            <li>Racing</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
 </html>
