@@ -1,0 +1,20 @@
+
+  
+  .card {
+    min-width: 500px;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+.col-md-6{
+  max-width: none;
+}
+
+  .btn-block {
+    margin-bottom: 10px;
+  }
+  /* Light theme styles */
+
+.card img{
+  height: 250px;
+}
