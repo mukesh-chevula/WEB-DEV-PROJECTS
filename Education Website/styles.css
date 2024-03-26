@@ -1,6 +1,4 @@
-
-  
-  .card {
+.card {
     min-width: 500px;
     border: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -10,7 +8,7 @@
   max-width: none;
 }
 
-  .btn-block {
+.btn-block {
     margin-bottom: 10px;
   }
   /* Light theme styles */
