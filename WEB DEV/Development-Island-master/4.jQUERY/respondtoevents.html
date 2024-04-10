@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: auto;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: auto;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span id="great">great</span>
+        </p>
+        <p class="orange">paragraph2</p>
+    </div>
+    <p>a paragraph</p>
+    <div class="yellowbox" id="apple">
+        <p>apple</p>
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>
+
+        </ul>
+        <p><a href="http://www.google.com">this is a link</a></p>
+        <p><a href="htttp://www.microsoft.com">this is another link</a></p>
+
+    </div>
+    <div class="greenbox" id="">
+        <p>Microsoft</p>
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>
+
+        </ul>
+        <table>
+            <tr>
+                <th>Phone make</th>
+                <th>Model</th>
+                <th>Storage</th>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>iphone 5s</td>
+                <td>16gb</td>
+            </tr>
+
+            <tr>
+                <td>Apple</td>
+                <td>iphone 5s</td>
+                <td>16gb</td>
+            </tr>
+        </table>
+        <p> <input type="text" placeholder="enter your name: " id="input"><button type="submit" id="submit">submit</button></p>
+    </div>
+    <button id="button1">change facebook content</button>
+    <button id="button2">change apple content</button>
+    </div>
+    <script>
+        $(function() {
+            //$("p").click(function() {
+            //$("p").css("background-color", "rgba(164, 21, 177, 0.87)");   all p inherit the settings
+            //$(this).css("background-color", "rgba(164, 21, 177, 0.87)");  only this p inherit
+            $("p").mouseover(function() {
+                $(this).css("background-color", "rgba(164, 21, 177, 0.87)");
+            });
+            $("p").mouseout(function() {
+                $(this).css("background-color", "");
+            });
+            $("input").focus(function() {
+                $(this).css("background-color", "#fff0ff");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "#ffeeff");
+            });
+            $("input").keyup(function() {
+                $(this).css("background-color", "#000ffe");
+            });
+            $("#submit").click(function() {
+                $("#input").css("background-color", "#ffffff");
+                $("#input").val("");
+            });
+
+        })
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sortable</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+        
+        .sans-serif {
+            font-family: sans-serif;
+        }
+        
+        p {
+            margin: 0px;
+        }
+        
+        #container {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .connectedList {
+            margin-bottom: 5px;
+            border: 1px solid #eee;
+            min-height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>facebook is<span id="great">great</span> </p>
+        <ul id="list2" class="connectedList">
+            <li class="ui-state-default">bmw</li>
+            <li class="ui-state-default">toyota</liclass="ui-state-default">
+                <li class="ui-state-default notSortable">subaru</liclass="ui-state-default">
+
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="yellowbox ui-corner-all" id="apple">
+            <p>apple</p>
+            <ul id="list" class="connectedList">
+                <li class="ui-state-default">stem</li>
+                <li class="ui-state-default">rims</li>
+                <li class="ui-state-default notSortable">hubs</li>
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p id="microsoftParagraph">Microsoft</p>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+    <div class="ui-state-error" style="height: 100px;margin-top: 20px;">
+        <p>error class</p>
+    </div>
+    <div id="droppable" style="height: 100px;margin-top: 20px;">
+        <p>drop items here</p>
+    </div>
+    <p>enter your name :<input></p>
+    <script>
+        $(function() {
+            $("#list").sortable({
+                placeholder: "ui-state-highlight",
+                cancel: ".notSortable"
+            });
+            $("#list2").sortable();
+            $("#list,#list2").sortable({
+                connectWith: ".connectedList"
+            })
+        });
+    </script>
+</body>
+
+
+</html>

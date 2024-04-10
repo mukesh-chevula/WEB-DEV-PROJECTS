@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <title> popover plugin</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <button type="button" class="btn btn-primary" data-toggle="popover" data-content="<h4>popover</h4><p>replica popover of ipad</p>" data-trigger="hover">button</button>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="popover"]').popover({
+                html: true,
+                delay: {
+                    "show": 1000,
+                    "hide": 500
+                }
+            })
+            $('[data-toggle="popover"]').on('hidden.bs.popover', function() {
+                window.alert('is gone!');
+            })
+        })
+    </script>
+</body>
+
+</html>

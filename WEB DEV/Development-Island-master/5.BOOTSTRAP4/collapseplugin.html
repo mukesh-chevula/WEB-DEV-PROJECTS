@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>collapseplugin</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="#collapse1" data-toggle="collapse" class="btn btn-primary">Link</a>
+        <div class="bg-danger collapse" id="collapse1">
+            <p>Collapsible content1</p>
+            <p>Collapsible content1</p>
+            <p>Collapsible content1</p>
+        </div>
+
+        <button class="btn btn-primary" data-target="#collapse2" data-toggle="collapse">button</button>
+        <div class="bg-danger collapse" id="collapse2">
+            <p>Collapsible content2</p>
+            <p>Collapsible content2</p>
+            <p>Collapsible content2</p>
+        </div>
+        <br/>
+        <br/>
+        <div id="accordion" class="card-group">
+            <div class="card card-warning ">
+                <div class="card-header ">
+                    <h4 class="card-title">
+                        <a href="#collapse01" data-toggle="collapse" data-parent="#accordion">section1</a>
+                    </h4>
+                </div>
+                <div class="card-collapse collapse in" id="collapse01">
+                    <div class="card-body">
+                        <p>collapsible content 1</p>
+                        <p>collapsible content 2</p>
+                        <p>collapsible content 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="card card-success ">
+            <div class="card-header ">
+                <h4 class="card-title">
+                    <a href="#collapse02" data-toggle="collapse" data-parent="#accordion">section2</a>
+                </h4>
+            </div>
+            <div class="card-collapse collapse in" id="collapse02">
+                <div class="card-body">
+                    <p>collapsible content 1</p>
+                    <p>collapsible content 2</p>
+                    <p>collapsible content 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            //$('#collapse02').collapse('show');
+            $('#collapse02').collapse('toggle');
+            $('#collapse01').on('hidden.bs.collapse', function() {
+                window.alert("section 1 hidden");
+            })
+        });
+    </script>
+</body>
+
+</html>

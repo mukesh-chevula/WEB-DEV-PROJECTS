@@ -1,0 +1,50 @@
+/* Add font family, background, */
+
+body {
+    background: url("road.jpg") center center fixed;
+    background-size: cover;
+    font-family: arvo, serif;
+}
+
+
+/* Jumbotron */
+
+div.jumbotron {
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+.jumbotron h1 {
+    letter-spacing: 2.5px;
+    text-align: center;
+}
+
+.jumbotron h3 {
+    text-align: center;
+}
+
+label {
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Google Map */
+
+div#googleMap {
+    width: 100%;
+    height: 200px;
+    margin: 20px auto;
+}
+
+
+/* Output box */
+
+div#output {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px auto;
+}

@@ -1,0 +1,88 @@
+body {
+    background: url(./images/abstract.jpg);
+    background-size: cover;
+    font-family: 'Vollkorn SC', serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fff;
+}
+
+
+/*title*/
+
+#header {
+    text-align: center;
+    font-size: 4em;
+}
+
+
+/*Lap*/
+
+#lap {
+    text-align: right;
+    font-size: 4em;
+}
+
+
+/*Time*/
+
+#time {
+    top: 250px;
+    text-align: center;
+    font-size: 7vw;
+}
+
+
+/*Buttons*/
+
+#controlsContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.control {
+    color: white;
+    background-color: #d7A04e;
+    height: 8vh;
+    width: 7vw;
+    border-radius: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+    box-shadow: 0 0 5px 4px rgb(230, 150, 31);
+    cursor: pointer;
+}
+
+.control:active {
+    background-color: #fff;
+    color: #d7A04e;
+}
+
+
+/*laps*/
+
+#laps {
+    display: relative;
+    margin-top: 100px;
+    max-height: 270px;
+    overflow-y: scroll;
+}
+
+.lap {
+    height: 50px;
+    border-bottom: 1px solid white;
+    margin: 15px;
+}
+
+.laptimetitle {
+    font-size: 1.5em;
+    float: left;
+}
+
+.laptime {
+    font-size: 2em;
+    float: right;
+}

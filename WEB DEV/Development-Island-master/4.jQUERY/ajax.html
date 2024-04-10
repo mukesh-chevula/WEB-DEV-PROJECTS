@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: 300px;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+        
+        .sans-serif {
+            font-family: sans-serif;
+        }
+        
+        p {
+            margin: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span id="great">great</span>
+        </p>
+    </div>
+
+    <div class="yellowbox sans-serif" id="apple">
+        <p>apple</p>
+    </div>
+    <div class="greenbox" id="microsoft">
+        <p id="microsoftParagraph">Microsoft</p>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+    <p>enter your name :<input></p>
+    <script>
+        $(function() {
+            $("#facebook").load("ajax/somedata.txt");
+        });
+    </script>
+</body>
+
+
+</html>

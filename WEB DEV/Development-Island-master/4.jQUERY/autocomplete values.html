@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>autocomplete values</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+        
+        .ui-autocomple {
+            max-height: 100px;
+            overflow-y: scroll;
+            max-width: 200px;
+        }
+        
+        #city {
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>facebook</p>
+        <p>Input your city<input id="city"> </p>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <p>apple</p>
+    </div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p id="microsoftParagraph">Microsoft</p>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+
+    <script>
+        $(function() {
+            $("#city").autocomplete({
+                source: ["London", "Athens", "Paris", "Berlin", "Chigaco", "Madrid", "London", "Athens", "Paris", "Berlin", "Chigaco", "Madrid"]
+            });
+        });
+    </script>
+</body>
+
+
+</html>

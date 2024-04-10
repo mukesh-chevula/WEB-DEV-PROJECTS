@@ -1,0 +1,217 @@
+body {
+    position: relative;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 1 !important;
+}
+
+.affix~.container-fluid {
+    padding-top: 70px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+#arriba {
+    color: #fff;
+    padding-top: 50px;
+    background-color: #ff9966;
+    height: 200px;
+}
+
+#typography {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: darkgrey;
+}
+
+#typo2 {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: darkolivegreen;
+    height: 275px
+}
+
+#tables {
+    color: #000;
+    padding-top: 50px;
+    background-color: #FFF;
+}
+
+#tables2 {
+    color: #000;
+    padding-top: 50px;
+    background-color: lightblue;
+}
+
+#images {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #800000;
+}
+
+#jumbotron {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #800080;
+}
+
+#wells {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #008000;
+}
+
+#pagehead {
+    color: #000;
+    padding-top: 50px;
+    background-color: darkgrey;
+    height: 250px;
+}
+
+#alerts {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: olive;
+}
+
+#buttons {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #000080;
+}
+
+#glyphicons {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #008080;
+    min-height: 250px;
+}
+
+#badgeslabels {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #000;
+    height: 500px;
+}
+
+#progressbar {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #808080;
+}
+
+#pagination {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #800000;
+    height: 500px;
+}
+
+#pager {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #800080;
+}
+
+#listgroups {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #008000;
+    height: 500px;
+}
+
+#panels {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #808000;
+}
+
+#dropdowns {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #000080;
+    height: 500px;
+}
+
+#collapse {
+    padding-top: 50px;
+}
+
+#tabspills {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #000;
+}
+
+#navbar {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #808080;
+}
+
+#forms {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #800000;
+}
+
+#inputs {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #800080;
+}
+
+#mediaobjects {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #008000;
+}
+
+#carousel {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #808000;
+}
+
+#modals {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #000080;
+}
+
+#tooltips {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #008080;
+}
+
+#popover {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #000;
+}
+
+#scrollspy {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #808080;
+    height: 500px;
+}
+
+#affix {
+    color: #FFF;
+    padding-top: 50px;
+    background-color: #008080;
+    height: 500px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expression</title>
+</head>
+
+<body>
+    <p>String :<span id="string"></span></p>
+    <p>Pattern :<span id="pattern"></span></p>
+    <p>Result(search) :<span id="search"></span></p>
+    <p>Result(match) :<span id="match"></span></p>
+    <p>Result(test) :<span id="test"></span></p>
+    <script>
+        var str = "Atlanta \n32456 75%";
+        //var pattern = /\d{4}/g; how many digits are in string
+        //var pattern = /^A/g; capital letters 
+        var pattern = /\n/g; //chk line breaks
+
+        //var pattern = /\W/g; chk for any other special chr.
+
+        //var pattern = /\w/g; chk special character
+
+        //var pattern = /\d/g; chk if any digits
+        //var pattern = /[^atn]/g; //check if contains these char^
+        //var pattern = /[a-z]/g;//check if string contains these ^
+        //var pattern = new RegExp("a","g");
+        document.getElementById("string").innerHTML = str;
+        document.getElementById("pattern").innerHTML = pattern;
+        document.getElementById("search").innerHTML = str.search(pattern);
+        document.getElementById("match").innerHTML = str.match(pattern);
+        document.getElementById("test").innerHTML = pattern.test(str);
+    </script>
+
+</body>
+
+</html>

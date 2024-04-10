@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span id="great">great</span>
+        </p>
+
+    </div>
+
+    <div class="yellowbox" id="apple">
+        <p>apple</p>
+
+
+    </div>
+    <div class="greenbox" id="microsoft">
+        <p id="microsoftParagraph">Microsoft</p>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+    <p><input></p>
+    <button id="changeFacebook">change Facebook text</button>
+    <button id="changeApple">change apple Html</button>
+    <button id="changeInput">change input value</button>
+    <button id="changeMicrosoft">change Microsoft Link</button>
+    <button id="addsomeText">add some text.</button>
+
+    <script>
+        $(function() {
+            $("#changeFacebook").click(function() {
+                $("#facebook").text("this is facebook");
+            })
+        });
+        $("#changeApple").click(function() {
+            $("#apple").html("<p>this is apple</p><p>this is new IOS software</p>");
+        })
+        $("#changeInput").click(function() {
+            $("input").val("Eddie");
+        })
+        $("#changeMicrosoft").click(function() {
+            $("#microsoftLink").attr({
+                "href": "https://www.google.com/",
+                "title": "Google"
+            })
+            $("#addsomeText").click(function() {
+                /*$("#microsoft").append("<ul><li>bmw</li><li>Audi</li><li>Toyota</li>");
+                });
+            $("#addText").click(function() {
+                $("#microsoft").prepend("<ul><li>bmw</li><li>Audi</li><li>Toyota</li>")*/
+                ;
+                $("#microsoftParagraph").after("<p>New Paragraph</p>");
+
+
+            });
+        });
+    </script>
+</body>
+
+
+</html>

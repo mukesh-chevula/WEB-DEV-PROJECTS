@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectable</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: auto;
+            width: auto;
+            padding: 10px;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: auto;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+        
+        .sans-serif {
+            font-family: sans-serif;
+        }
+        
+        p {
+            margin: 0px;
+        }
+        
+        li {
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        #list .ui-selecting {
+            background: #740da0;
+        }
+        
+        #list .ui-selected {
+            background: #0d1ca0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>facebook is
+            <span id="great">great</span>
+        </p>
+    </div>
+    <div class="container">
+        <div class="yellowbox ui-corner-all" id="apple">
+            <p>apple</p>
+            <ul id="list">
+                <li class="ui-state-default">bmw</li>
+                <li class="ui-state-default">yamaha</li>
+                <li class="ui-state-default">mercedes</li>
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p id="microsoftParagraph">Microsoft</p>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+    <div class="ui-state-error" style="height: 100px;margin-top: 20px;">
+        <p>error class</p>
+    </div>
+    <div id="droppable" style="height: 100px;margin-top: 20px;">
+        <p>drop items here</p>
+    </div>
+    <p>enter your name :<input></p>
+    <script>
+        $(function() {
+            $("#list").selectable({
+                stop: function() {
+                    $(".ui-selected").each(function() {
+                        $("<p></p>").text($(this).text()).appendTo("#microsoft");
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+
+</html>

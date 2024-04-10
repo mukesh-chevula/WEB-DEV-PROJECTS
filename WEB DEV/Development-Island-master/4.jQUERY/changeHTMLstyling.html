@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change HTML styling</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: 300px;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+        
+        .sans-serif {
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="changeFacebook">change Facebook</button>
+    <button id="changeApple">change Apple</button>
+    <button id="changeMicrosoft">change Microsoft</button>
+    <button id="showMicrosoft">show Microsoft</button>
+    <button id="changeGreat">change great</button>
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span id="great">great</span>
+        </p>
+    </div>
+
+    <div class="yellowbox sans-serif" id="apple">
+        <p>apple</p>
+    </div>
+    <div class="greenbox" id="microsoft">
+        <p id="microsoftParagraph">Microsoft</p>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+    <p>enter your name :<input></p>
+    <script>
+        $(function() {
+            $("#changeFacebook").click(function() {
+                $("#facebook").css("width", /*'300'*/ /*200 + 100*/ 100 * Math.random() -
+                    50 + $("#facebook").width());
+                $("#facebook").addClass("greenbox"); //inherits the other class properties
+                //window.alert($("#facebook").innerHeight());
+                //window.alert($("#facebook").outerHeight());
+
+            })
+            $("#changeApple" /*"#apple"*/ ).click(function() {
+                $("#apple").removeClass("sans-serif");
+                $("#apple").css("position", "absolute"); //random position
+                $("#apple").css({
+                    'top': 200 * Math.random(),
+                    'left': 200 * Math.random(),
+                    'background-color': 'rgb(' +
+                        Math.floor(256 * Math.random()) + ',' +
+                        Math.floor(256 * Math.random()) + ',' +
+                        Math.floor(256 * Math.random()) + ')'
+                });
+            });
+            $("#changeMicrosoft").click(function() {
+                $("#microsoft").toggleClass("greenbox");
+            });
+            $("#microsoft").dblclick(function() {
+                $(this).hide();
+            })
+            $("#showMicrosoft").click(function() {
+                $("#microsoft").show();
+            })
+            $("#changeGreat").click(function() {
+                $("#great").wrap("<button></button>");
+            })
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span class="great">great</span>
+        </p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>apple</p>
+    </div>
+    <div class="greenbox" id="Microsoft">
+        <p>Microsoft</p>
+    </div>
+    <button id="button1" onclick="swap('facebook','apple')">change facebook content</button>
+    <button id="button2" onclick="swap('apple','Microsoft')">change apple contnet</button>
+    </div>
+    <script>
+        function greeting1() {
+            window.alert("hello");
+        }
+        //greeting1();
+
+        function greeting2(firstName) {
+            window.alert("hello " + firstName);
+        }
+        //greeting2("John");
+
+        function sum(a, b) {
+            return a + b;
+        }
+        var x = sum(3, 7);
+        // window.alert(x);
+
+        function swap(id1, id2) {
+            var y = document.getElementById(id1).innerHTML;
+            var z = document.getElementById(id2).innerHTML;
+            document.getElementById(id2).innerHTML = y;
+            document.getElementById(id1).innerHTML = z;
+
+        }
+    </script>
+</body>
+
+</html>

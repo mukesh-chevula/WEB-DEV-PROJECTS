@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: auto;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: auto;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span id="great">great</span>
+        </p>
+        <p class="orange">paragraph2</p>
+    </div>
+    <p>a paragraph</p>
+    <div class="yellowbox" id="apple">
+        <p>apple</p>
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>
+
+        </ul>
+        <p><a href="http://www.google.com">this is a link</a></p>
+        <p><a href="htttp://www.microsoft.com">this is another link</a></p>
+
+    </div>
+    <div class="greenbox" id="">
+        <p>Microsoft</p>
+        <ul>
+            <li>BMW</li>
+            <li>AUDI</li>
+            <li>MERCEDES</li>
+
+        </ul>
+        <table>
+            <tr>
+                <th>Phone make</th>
+                <th>Model</th>
+                <th>Storage</th>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>iphone 5s</td>
+                <td>16gb</td>
+            </tr>
+
+            <tr>
+                <td>Apple</td>
+                <td>iphone 5s</td>
+                <td>16gb</td>
+            </tr>
+        </table>
+        <p> <input type="text" placeholder="enter your name:"><button type="submit">submit</button></p>
+    </div>
+    <button id="button1">change facebook content</button>
+    <button id="button2">change apple content</button>
+    </div>
+    <script>
+        $(function() {
+            //$("*").css("font-size", '40px'); style the paragraph
+            //$("div > p").css("text-align", "center") align to center inc all child p of div's
+            //$("div ~ p").css("text-align", "center") p_a paragraph sibling of div
+            $("div p").css("text-align", "center") //with space all the descendants got aligned to center except the p
+            $("#great").css("background-color", "orange");
+            $(".orange").css("background-color", "grey");
+            $("div.bluebox").css("font-family", "sans-serif");
+            //$("p:first-child").css("text-decoration", "underline");//choose all the first children to be underlined
+            //$("p:last-child").css("text-decoration", "underline");
+            $("p:first-child,p:last-child").css("text-decoration", "underline"); //both children are combined with ","in result all of them are underlined
+            $("[href]").css("color", "red");
+            $("li:first-child,li:last-child").css("background-color", "green");
+            $("tr:even").css("background-color", "grey"); //select all the even rows
+            $("tr:odd").css("background-color", "purple"); //select all the odd rows
+            $(":input").css("background-color", "blue");
+            $(":Submit").css("background-color", "white");
+            $("div:has(table)").css("background-color", "pink");
+
+
+        });
+    </script>
+</body>
+
+
+</html>

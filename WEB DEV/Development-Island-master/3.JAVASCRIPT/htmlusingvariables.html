@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox" id="facebook">
+        <p>facebook is
+            <span class="great">great</span>
+        </p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>apple</p>
+    </div>
+    <div class="greenbox" id="">
+        <p>Microsoft</p>
+    </div>
+    <button id="button1">change facebook style</button>
+    <button id="button2">change apple style</button>
+    </div>
+    <script>
+        var color = 'rgb(18,149,68)';
+        document.getElementById("button1").onclick = function() {
+            document.getElementById("facebook").style.backgroundColor = color;
+        }
+        var x, y, z;
+        x = Math.round(Math.random() * 256);
+        document.getElementById("button2").onclick = function() {
+            x = Math.round(Math.random() * 256);
+            y = Math.round(Math.random() * 256);
+            z = Math.round(Math.random() * 256);
+            appleColor = 'rgb(' + x + ',' + y + ',' + z + ')';
+            document.getElementById("apple").style.backgroundColor = appleColor;
+            document.getElementById("apple").innerHTML = appleColor;
+
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+/* center element and background img */
+
+body {
+    text-align: center;
+    background: url(./5.jpg) center center fixed;
+    background-size: cover;
+    font-family: 'Comic Neue', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+#header {
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    line-height: 50px;
+    width: 205vh;
+    height: 4vw;
+    margin: 10px auto;
+    border-radius: 64px;
+    background: #35aaf0;
+    box-shadow: 23px -23px 44px #23709e, -23px 23px 44px #47e4ff;
+}
+
+
+/* input container */
+
+.inputContainer {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.inputContainer2 {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.input2 {
+    width: 133px;
+    color: #5bb4e7;
+    font-size: 1.3em;
+    float: left;
+}
+
+
+/* color input ,line thickness,slider */
+
+.input {
+    height: 30px;
+    font-size: 1.3em;
+}
+
+#circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 auto;
+    box-shadow: 23px -23px 44px #23709e, -23px 23px 44px #47e4ff;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#thickInput {
+    position: relative;
+}
+
+#slider {
+    margin: 10px auto;
+}
+
+
+/* canvas container */
+
+#container {
+    width: 500px;
+    height: 400px;
+    border: 1px solid rgba(5, 36, 211, 0.521);
+    margin: 10px auto;
+}
+
+#paint {
+    background-color: white;
+    cursor: crosshair;
+}
+
+
+/* buttons */
+
+.button {
+    border-radius: 20px;
+    background: #35aaf0;
+    height: 50px;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.button:active {
+    top: 8px;
+}
+
+#erase:hover {
+    background: #f674de;
+    box-shadow: 23px 23px 44px #f823d1, 23px 23px 44px #f674de;
+}
+
+#save:hover {
+    background: #23709e;
+    box-shadow: 23px 23px 44px #23709e, 23px 23px 44px #3eabeb;
+}
+
+#reset:hover {
+    background: #000000;
+    box-shadow: 23px 23px 44px #000000, 23px 23px 44px #645e5e;
+}

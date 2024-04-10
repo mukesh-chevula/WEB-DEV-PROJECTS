@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies</title>
+</head>
+
+<body>
+    <p id="myParagraph">Javascript</p>
+    <script>
+        document.cookie = "username=buenosdias";
+        document.cookie = "age=33";
+        document.cookie = "country=Spain";
+        window.alert(document.cookie);
+        $cookie = document.cookie.split(';');
+        window.alert($cookie);
+        for (let i = 0; i < $cookie.length; i++) {
+            document.getElementById("myParagraph").innerHTML += "<br/>" + $cookie[i];
+        };
+        //if delete everything and window.alert(document.cookie); then everything is session storage kept
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+/* Style body  cover background image and font*/
+
+body {
+    font-family: 'Roboto Condensed';
+    background: url(images/company\ wall.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* style brand */
+
+
+/* style nav bar */
+
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 17px;
+    margin-right: 35px;
+}
+
+.nav-item :hover {
+    border-bottom: 4px solid #1b4b73;
+    border-radius: 4px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+
+/* style jumbotron */
+
+.jumbotron {
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    letter-spacing: 0.3em;
+}
+
+
+/* limit width of icon section */
+
+.container {
+    max-width: 1000px;
+}
+
+
+/* style icons section with bootstrap grid */
+
+.bodyimage {
+    height: 100px;
+}
+
+.col-md-4 {
+    text-align: center;
+    color: #fff;
+}
+
+.icons p {
+    font-size: 15px;
+}
+
+
+/* style contact btn */
+
+.contact {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100%;
+}
+
+.btn {
+    opacity: 0.8;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px 70px;
+    letter-spacing: 1.3px;
+}
+
+.btn :hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+}
+
+
+/* footer */
+
+.footer p {
+    opacity: 0.8;
+    color: #1b4b73;
+    font-size: 70px;
+    padding: 10px 80px;
+}
+
+
+/* media queries for sizing icons */
+
+@media(max-width:768px) {
+    .bodyimage {
+        height: 70px;
+    }
+    .nav-item :hover {
+        border-bottom: 4% transparent #1b4b73;
+        border-radius: 4px;
+        padding-bottom: 3px;
+        cursor: pointer;
+    }
+}
+
+
+/*  */

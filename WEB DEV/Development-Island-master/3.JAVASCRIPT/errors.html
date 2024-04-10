@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>errors</title>
+    <style>
+        #error {
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="error"></p>
+    <p>Your password should contain 6characters,1 number,1 cap letter.</p>
+    <p>Enter password</br><input id="password" type="password" </p>
+        <p>Re-Enter password</br><input id="password2" type="password" </p>
+            <button onclick="check()">Submit</button>
+
+            <script>
+                function check() {
+                    $password = document.getElementById("password").value;
+                    $password2 = document.getElementById("password2").value;
+                    $errorMessage = document.getElementById("error");
+                    $errorToThrow = "";
+                    try {
+                        if (password.length < 6) {
+                            $errorToThrow += "<br/>Password too short.";
+                        }
+                        if (/[A-Z]/g.test(password) == false) {
+                            $errorToThrow += "<br/>Password should include at least one capital letter.";
+                        }
+                        if (/\d/g.test(password) == false) {
+                            $errorToThrow += "<br/>Password should include at least one digit.";
+                        }
+                        if (password != $password2) {
+                            $errorToThrow += "<br/>Password should match.";
+                        }
+                        throw $errorToThrow;
+                    } catch (err) {
+                        $errorMessage.innerHTML = err;
+                    }
+                }
+
+                /*try {
+                            sum(3, 4)
+                        } catch (err) {
+                            document.getElementById("error").innerHTML = err.message;
+                        }*/
+            </script>
+</body>
+
+</html>

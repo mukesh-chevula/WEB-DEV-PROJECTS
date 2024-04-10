@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>date picker</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>flight departure date: <input id="departure"></p>
+        <p>flight return date: <input id="return"></p>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+
+
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+
+        <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a></p>
+    </div>
+
+    <script>
+        $(function() {
+            $("#departure").datepicker({
+                //showAnim: "slideDown"
+                //showAnim: "drop"
+                showAnim: "fadeIn",
+                changeYear: true,
+                numberOfMonths: 2,
+                dateFormat: "d,M,y", //"mm/dd/yy"if use capital then it show full word//if use only on ch "m/d/y"it shows only one ch
+                showOn: "button",
+                buttonImage: "images/calendar-icon-png-14.png",
+                buttonImageOnly: true,
+                buttonText: "choose your departure only.",
+                minDate: +1,
+                maxDate: "+12M +10D",
+                onClose: function(selectedDate) {
+                    $("#return").datepicker("option", "minDate", selectedDate)
+                },
+                showWeek: true
+
+            });
+            $("#return").datepicker({
+                dateFormat: "d,M,y"
+            });
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,40 @@
+/*add background picture to page1*/
+
+#page1 {
+    background: url("./reading.jpeg");
+    background-attachment: fixed;
+    background-size: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lobster', serif;
+}
+
+
+/*error message*/
+
+#error {
+    background-color: #D87777;
+    width: 50%;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+
+/*read word*/
+
+#result {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5% 0;
+}
+
+
+/* Hide the number input */
+
+.full-width-slider input {
+    display: none !important;
+}
+
+.full-width-slider .ui-slider-track {
+    margin-left: 15px;
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <title> scrollspy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" id="myNavbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Store</a>
+                <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#allProducts" class="active">All products</a></li>
+                    <li><a href="#departments">Departments<span class="caret"></span></a></li>
+                    <li><a href="#help">help</a></li>
+
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <span class="input-group-btn"><button type="submit" class="btn btn-info">Go</button></span>
+                        <label for="search" class="sr-only">Search</label>
+                        <input type="text" id="search" class="form-control" placeholder="Search">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+                </form>
+                <form class="navbar-form navbar-right">
+                    <input class="btn btn-success" type="button" value="Login">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top: 60px; height: 300px; overflow: auto;" data-spy="scroll" data-target="#myNavbar">
+        <h4 id="allProducts">all Products</h4>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p id="help">Help</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p id="departments">Help2</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+        <p>Paragra[h</p>
+
+        <p>Paragra[h</p>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('#myNavbar').on('activate.bs.scrollspy', function() {
+            $('.btn-success').toggleClass('btn-warning');
+        })
+    </script>
+</body>
+
+</html>

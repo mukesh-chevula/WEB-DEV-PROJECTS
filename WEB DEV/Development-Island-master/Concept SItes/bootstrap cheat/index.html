@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 3.0 Cheatsheet for Newbies like Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/37f0ef1ddc.js"></script>
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <div class="container-fluid" id="arriba">
+            <h2>Welcome!</h2>
+            <p>Following the maxim of "the best way to learn is to teach", I have created this cheatsheet for myself and others to utilize when working with bootstrap. As I am just learning, there may be some mistakes/typos. Either way, I hope this page
+                can be a useful resource for beginniners like me. For a more complete explanation of bootstrap, please visit <a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank"> -W3Schools Bootstrap Tutorial</a>.</p>
+        </div>
+        <nav class="navbar navbar-default" data-spy="affix" data-offset-top="200">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand">Bootstrap Cheatsheet for Newbies like Me</a></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Bootstrap Lessons <span class="caret"></span></a>
+                        <ul class="dropdown-menu scrollable-menu" role="menu">
+                            <li><a href="#typography">Typography I</a></li>
+                            <li><a href="#typo2">Typography II</a></li>
+                            <li><a href="#tables">Tables</a></li>
+                            <li><a href="#images">Images</a></li>
+                            <li><a href="#jumbotron">Jumbotrons</a></li>
+                            <li><a href="#wells">Wells</a></li>
+                            <li><a href="#alerts">Alerts</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#glyphicons">Glyphicons</a></li>
+                            <li><a href="#badgeslabels">Badges/Labels</a></li>
+                            <li><a href="#progressbar">Progress Bars</a></li>
+                            <li><a href="#pagination">Pagination</a></li>
+                            <li><a href="#pager">Pager</a></li>
+                            <li><a href="#listgroups">List Groups</a></li>
+                            <li><a href="#panels">Panels</a></li>
+                            <li><a href="#dropdowns">Dropdowns</a></li>
+                            <li><a href="#collapse">Collapse</a></li>
+                            <li><a href="#tabspills">Tabs and Pills</a></li>
+                            <li><a href="#navbar">Navigation Bars</a></li>
+                            <li><a href="#forms">Forms</a></li>
+                            <li><a href="#inputs">Inputs</a></li>
+                            <li><a href="#mediaobjects">Media Objects</a></li>
+                            <li><a href="#carousel">Carousels</a></li>
+                            <li><a href="#modals">Modals</a></li>
+                            <li><a href="#tooltips">Tooltips</a></li>
+                            <li><a href="#popover">Popovers</a></li>
+                            <li><a href="#scrollspy">Scrollspy</a></li>
+                            <li><a href="#affix">Affix</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid" id="typography">
+            <h3>Typography <small>Everything you can use to format text within Bootstrap</small></h3>
+            <div class="row">
+                <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+                </div>
+                <div class="col-md-5 col-lg-5 col-sm-5 col-xs-10">
+                    <code> &lt;small&gt;</code> Used to make text smaller <br>
+                    <small>Used to make text smaller</small><br>
+                    <code> &lt;mark&gt;</code> Used to highlight a text <br> This text is <mark>important</mark><br>
+                    <code> &lt;abbr&gt;</code> Used to make a tooltip for abbreviations <br> I work for the <abbr title="World Trade Organization"> WTO</abbr><br>
+                    <code> &lt;blockquote&gt;</code> Gives predetermined formatting to a quote <br>
+                    <blockquote>'Doh!</blockquote><br>
+                    <code> &lt;footer&gt;</code> Formatting to display the author of a quote <br>
+                    <blockquote>'Doh!
+                        <footer>Homer Simpson</footer>
+                    </blockquote><br>
+                    <code> &lt;blockquote-reverse&gt;</code> Right-aligns a quote <br>
+                    <blockquote class="blockquote-reverse">'Doh!
+                        <footer>Homer Simpson</footer>
+                    </blockquote><br>
+                </div>
+                <div class="col-md-5 col-lg-5 col-sm-5 col-xs-10">
+                    <code> &lt;dl&gt;</code> Description List: To group things in a list <br>
+                    <code>&lt;dt&gt;</code>Title of the list<br>
+                    <code>&lt;dd&gt;</code>List item
+                    <dl>
+                        <dt>Shopping List</dt>
+                        <dd>- Eggs</dd>
+                        <dd>- Milk</dd>
+                        <dd>- Plutonium</dd>
+                    </dl>
+                    <code> &lt;code&gt;</code> Used to highlight coding text <br>
+                    <small>Note: use & l t ; for &lt; and & g t ; for &gt;</small><br>
+                    <code>All of the examples so far have used this</code><br>
+                    <code> &lt;kbd&gt;</code> Used to indicate a keystroke<br> Use <kbd>ctrl + c</kbd> to plagiarize<br>
+                    <code> &lt;pre&gt;</code> Used to call up a fixed width font and nautral line breaks <br>
+                    <pre>
+    Here is
+    an example</pre><br>
+                </div>
+                <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="typo2">
+            <h3>Typography 2 <small style="color:white;"> Bootstrap classes for styling typography tags</small></h3>
+            <div class="row">
+                <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+                </div>
+                <div class="col-md-10 col-lg-10 col-sm-10 col-xs-0">
+                    <dl>
+                        <dt>Useful list classes</dt>
+                        <dd><code>class="list-unstyled"</code>takes bullets off of lists</dd>
+                        <dd><code>class="list-inline"</code> puts list items in a row</dd>
+                        <dd><code>class="dl-horizontal"</code> makes a description list horizontal </dd>
+                        <dt>Prefixed text classes</dt>
+                        <dd><code>class="pre-scrollable"</code> makes your pre box scrollable</dd>
+                    </dl>
+                </div>
+                <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="tables">
+            <h3>Tables <small style="color:white;"> Bootstap tables have a better style than plain html tables</small></h3>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+                <dl>
+                    <dt>Tags to remember</dt>
+                    <dd><code> &lt;table class="table"&gt;</code> Used to open a table </dd>
+                    <dd><code> &lt;thead&gt;</code> Header/Title </dd>
+                    <dd><code> &lt;tr&gt;</code> Row </dd>
+                    <dd><code> &lt;tbody&gt;</code> Table Content </dd>
+                    <dd><code> &lt;td&gt;</code> Cell </dd>
+                    <dt>Bootstrap Table Classes</dt>
+                    <dd><code> class="table table-striped"</code> For zebra rows </dd>
+                    <dd><code> class="table table-bordered"</code> For an outside border </dd>
+                    <dd><code> class="table table-hover"</code> Highlights rows upon hover </dd>
+                    <dd><code> class="table table-condensed"</code> Reduces padding in each cell </dd>
+                </dl>
+            </div>
+            <div class="col-md-7 col-lg-7 col-sm-7 col-xs-12">
+                <!--come back to this later to add in collabsible areas to show each kind of table styling-->
+                <h4>Plain Jane Table</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Trait</th>
+                            <th>Fave Food</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Garfield</td>
+                            <td>Lazy</td>
+                            <td>Lasagna</td>
+                        </tr>
+                        <tr>
+                            <td>Nermal</td>
+                            <td>Annoying (to Garfield)</td>
+                            <td>Cat food</td>
+                        </tr>
+                        <tr>
+                            <td>Odie</td>
+                            <td>Happy</td>
+                            <td>Dog Food</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Added Zebra Stripes</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Trait</th>
+                            <th>Fave Food</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Garfield</td>
+                            <td>Lazy</td>
+                            <td>Lasagna</td>
+                        </tr>
+                        <tr>
+                            <td>Nermal</td>
+                            <td>Annoying (to Garfield)</td>
+                            <td>Cat food</td>
+                        </tr>
+                        <tr>
+                            <td>Odie</td>
+                            <td>Happy</td>
+                            <td>Dog Food</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>With striped rows and a border</h4>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Trait</th>
+                            <th>Fave Food</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Garfield</td>
+                            <td>Lazy</td>
+                            <td>Lasagna</td>
+                        </tr>
+                        <tr>
+                            <td>Nermal</td>
+                            <td>Annoying (to Garfield)</td>
+                            <td>Cat food</td>
+                        </tr>
+                        <tr>
+                            <td>Odie</td>
+                            <td>Happy</td>
+                            <td>Dog Food</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>With highlight upon hover</h4>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Trait</th>
+                            <th>Fave Food</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Garfield</td>
+                            <td>Lazy</td>
+                            <td>Lasagna</td>
+                        </tr>
+                        <tr>
+                            <td>Nermal</td>
+                            <td>Annoying (to Garfield)</td>
+                            <td>Cat food</td>
+                        </tr>
+                        <tr>
+                            <td>Odie</td>
+                            <td>Happy</td>
+                            <td>Dog Food</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Condensed Table</h4>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Trait</th>
+                            <th>Fave Food</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Garfield</td>
+                            <td>Lazy</td>
+                            <td>Lasagna</td>
+                        </tr>
+                        <tr>
+                            <td>Nermal</td>
+                            <td>Annoying (to Garfield)</td>
+                            <td>Cat food</td>
+                        </tr>
+                        <tr>
+                            <td>Odie</td>
+                            <td>Happy</td>
+                            <td>Dog Food</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+            </div>
+        </div>
+        <div class="container-fluid" id="tables2">
+            <h3>More Table Styling <small style="color:white;"> Bootstap tables have a better style than plain html tables</small></h3>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+                <dl>
+                    <dt>Tags to remember</dt>
+                    <dd><code> &lt;tr or td class="success"&gt;</code> Green cell or row </dd>
+                    <dd><code> &lt;"danger"&gt;</code> Red cell or row </dd>
+                    <dd><code> &lt;info&gt;</code> Light blue </dd>
+                    <dd><code> &lt;warning&gt;</code> Yellow/Orange </dd>
+                    <dd><code> &lt;active&gt;</code> Gray </dd>
+                    <dd><code> &lt;table-responsive&gt;</code> To scroll horizontally on small screens. NOTE: Must be a div class that holds the table </dd>
+
+                </dl>
+            </div>
+            <div class="col-md-7 col-lg-7 col-sm-7 col-xs-12">
+                <!--come back to this later to add in collabsible areas to show each kind of table styling-->
+                <h4>Table with styles</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Color</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="success">
+                            <td>"success"</td>
+                            <td>Green</td>
+
+                        </tr>
+                        <tr class="danger">
+                            <td>"danger"</td>
+                            <td>Red</td>
+                        </tr>
+                        <tr class="info">
+                            <td>"info"</td>
+                            <td>Light Blue</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>"warning"</td>
+                            <td>Orange</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive">
+                    <h4>Responsive Table</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Character</th>
+                                <th>Trait</th>
+                                <th>Fave Food</th>
+                                <th>Age</th>
+                                <th>Marital Status</th>
+                                <th>Color</th>
+                                <th>Fave Type of Sushi</th>
+                                <th>Fave Romantic Comedy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Garfield</td>
+                                <td>Lazy</td>
+                                <td>Lasagna</td>
+                                <th>34</th>
+                                <th>Single</th>
+                                <th>Orange</th>
+                                <th>California Roll</th>
+                                <th>None</th>
+                            </tr>
+                            <tr>
+                                <td>Nermal</td>
+                                <td>Annoying (to Garfield)</td>
+                                <td>Cat food</td>
+                                <th>2 months</th>
+                                <th>Single</th>
+                                <th>Gray</th>
+                                <th>Allergic</th>
+                                <th>The Cat Lady</th>
+                            </tr>
+                            <tr>
+                                <td>Odie</td>
+                                <td>Happy</td>
+                                <td>Dog Food</td>
+                                <th>5</th>
+                                <th>Chasing</th>
+                                <th>Yellow and Brown</th>
+                                <th>All</th>
+                                <th>Amorres Perros</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-0">
+
+            </div>
+        </div>
+        <div class="container-fluid" id="images">
+            <h3>Images</h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                    <code> class="img-rounded" </code><br> Makes rounded edges on an image<br>
+                    <img class="img-rounded" width="200" src="http://www.toddpaben.com/images/purdyPics/seattle.jpg" alt="Seattle Skyline">
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                    <code> class="img-circle" </code><br> Makes image into a circle<br>
+                    <img class="img-circle" width="200" height="200" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" alt="Photo of Todd">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                    <code> class="img-thumbnail" </code><br> Puts a border around the image<br>
+                    <img class="img-thumbnail" width="200" src="http://www.toddpaben.com/images/purdyPics/bull.jpg" alt="Stockyards Sculpture">
+                </div>
+            </div>
+            <h3>Gallery Display<small>-you can display your images with captions and a border using this thing</small></h3><br>
+            <code> &lt;div class="thumbnail"> </code> +
+            <code> &lt;div class="col-md-4"> </code> +
+            <code> &lt;img style="width:100%"> </code> +
+            <code> &lt;div class="caption"> </code> <br>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img class="img-rounded" style="width:95%" src="http://www.toddpaben.com/images/purdyPics/needle.jpg" alt="Seattle Space Needle">
+                        <div class="caption">
+                            <p>This is a photo caption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img class="img-rounded" style="width:75%" src="http://www.toddpaben.com/images/purdyPics/chihuly.jpg" alt="Glass Art">
+                        <div class="caption">
+                            <p>This is a photo caption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img class="img-rounded" style="width:100%" src="http://www.toddpaben.com/images/purdyPics/att.jpg" alt="AT&T Stadium">
+                        <div class="caption">
+                            <p>This is a photo caption</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img class="img-rounded" style="width:100%" src="http://www.toddpaben.com/images/purdyPics/tesol.jpg" alt="TESOL 2017">
+                        <div class="caption">
+                            <p>This is a photo caption</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="jumbotron">
+            <h3>Jumbotrons <small style="color:#000">-Basically just a big box with big fonts, but it's in style</small></h3><br>
+            <code> &lt;div class="jumbotron"> </code> A jumbotron fills up whatever container it's in<br><br>
+            <div class="jumbotron" style="color:black">
+                <h3>Ooo! Look at me!</h3>
+                <p>I'm like totally jumbo sized!</p>
+                <p>And I've got plenty of outside space to feel free and padded!</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <p>You can put a Jumbotron inside a column div...
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="jumbotron" style="color:black">
+                        <h3>And it fits inside!</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid" id="pagehead">
+            <div class="page-header">
+                <h3>Page Header</h3>
+            </div>
+            <p><code> &lt;div class="page-header"></code>This is basically just a header with a line beneath it. No big deal.</p>
+        </div>
+        <div class="container-fluid" id="wells">
+            <h3>Wells<small>Not very deep wells in any case</small></h3>
+            <p><code>&lt;div class="well"></code> This will make a rounded box with an internal shade.</p>
+            <div class="row" style="color:black">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="well">Look</div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="well">@</div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="well">these</div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="well">wells!</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="alerts">
+            <h3>Alerts <small style="color:white"> - predefined boxes for alert messages -can be used in forms </small></h3>
+            <p><code>&lt;div class="alert alert-success"></code> - green box </p>
+            <p><code>&lt;div class="alert alert-danger"></code> - red box </p>
+            <p><code>&lt;div class="alert alert-warning"></code> - orange box </p>
+            <p><code>&lt;div class="alert alert-info"></code> - blue box </p>
+            <p><code>&lt;strong></code> - for boldfaced type </p>
+            <p><code>"alert-link"</code> - a class added to &lt;a> tags to match links to the color of the alert</p>
+            <div class="alert alert-success"><strong>Yay!</strong> You did something right for once!</div>
+            <div class="alert alert-danger"><strong>Oh no!</strong> You did something wrong this time!</div>
+            <div class="alert alert-warning"><strong>Watch it!</strong> You might do something wrong!</div>
+            <div class="alert alert-info"><strong>Hello!</strong> There are more classes below!</div>
+            <p><code>&lt;div class="alert alert-danger alert-dismissable"></code> + <code>&lt;a class="close" data-dismiss="alert" aria-label="close">& + times + ;</code> = an alert that can be closed</p>
+            <p>add the class <code>"fade in"</code> to make the alert disappear smoothly</p>
+
+            <div class="alert alert-warning alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Warning!</strong> Don't forget to write alert twice!</div>
+
+        </div>
+        <div class="container-fluid" id="buttons">
+            <h3>Buttons <small>-everyone needs something to push</small></h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <p> &lt;button> classes</p>
+                    <code>btn btn-primary</code><br>
+                    <code>btn btn-default</code><br>
+                    <code>btn btn-danger</code><br>
+                    <code>btn btn-warning</code><br>
+                    <code>btn btn-success</code><br>
+                    <code>btn btn-info</code><br>
+                    <code>btn btn-info btn-block</code><br>
+                    <code>btn btn-info btn-lg -sm -xs</code><br>
+                    <code>btn btn-info btn-group(+ sizes)</code><br>
+                    <code>btn-group-vertical</code><br><br>
+                    <code>btn-group-justified</code><br>
+                    <code>btn-active</code><br>
+                    <code>btn-disabled</code><br>
+                    <code>&lt;a class="btn"></code><br>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <p>Explanation</p>
+                    darker blue button
+                    <br>whitish button
+                    <br>red button
+                    <br>orange button
+                    <br>green
+                    <br>light blue
+                    <br>button fills container
+                    <br>different sizes of buttons
+                    <br>puts buttons together
+                    <br>vertical group of buttons
+                    <br>MORE WAYS TO STYLE BUTTONS
+                    <br>makes group span their div
+                    <br>to make a button look clicked
+                    <br>make a button look unclickable
+                    <br>so, you can change a link into a button
+                    <br>or make a button dropdown(see dropdowns)
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <p> What it looks like</p>
+                    <button class="btn btn-primary">What up?</button><br>
+                    <button class="btn btn-default">Homely</button><br>
+                    <button class="btn btn-danger">STOP!!!</button><br>
+                    <button class="btn btn-warning">Watch it!</button><br>
+                    <button class="btn btn-success">YAY!!!</button><br>
+                    <button class="btn btn-info">FYI</button><br>
+                    <button class="btn btn-primary btn-block">Whoa!  Look at me!</button><br>
+                    <button class="btn btn-lg btn-primary">-lg</button>
+                    <button class="btn btn-primary">normal</button>
+                    <button class="btn btn-sm btn-primary">-sm</button>
+                    <button class="btn btn-xs btn-primary">-xs</button><br>
+                    <div class="btn-group">
+                        <button class="btn btn-primary">WE</button>
+                        <button class="btn btn-primary">ARE</button>
+                        <button class="btn btn-primary">IN</button>
+                        <button class="btn btn-primary">A</button>
+                        <button class="btn btn-primary">GROUP</button>
+                    </div>
+                    <div class="btn btn-group-vertical">
+                        <button class="btn btn-primary">WE</button>
+                        <button class="btn btn-primary">ARE</button>
+                        <button class="btn btn-primary">IN</button>
+                        <button class="btn btn-primary">A</button>
+                        <button class="btn btn-primary">VERTICAL</button>
+                        <button class="btn btn-primary">GROUP</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="glyphicons">
+            <h3>Glyphicons<small style="color:#000"> The Egyptians would be so proud!</small></h3>
+            <code>&lt;span class="glyphicon glyphicon-________></code>
+            <br>The typical syntax for Glyphicons
+            <br>There are more than 250 Glyphicons and they can be used in buttons or as decrations
+            <br>When used as decoration only, you need to add an aria code to prevent screeen readers from reading them
+            <br>in the class tag write<code> aria-hidden="true"</code>
+            <br>Here are some examples of some of the oddest glyphicons
+            <span class="glyphicon glyphicon-sunglasses"></span>
+            <span class="glyphicon glyphicon-grain"></span>
+            <span class="glyphicon glyphicon-oil"></span>
+            <span class="glyphicon glyphicon-ice-lolly-tasted"></span>
+            <span class="glyphicon glyphicon-piggy-bank"></span>
+            <span class="glyphicon glyphicon-lamp"></span>
+            <span class="glyphicon glyphicon-bed"></span>
+            <span class="glyphicon glyphicon-globe"></span>
+            <br>Don't forget to give credit when you use glyphicons
+            <br>One more thing. You should provide a link to <a href="glyphicons.com" target="_blank">Glyphicons.com</a> any time you use them in you page.
+        </div>
+        <div class="container-fluid" id="badgeslabels">
+            <h3>Badges and Labels</h3>
+            <p> Badges and labels are used to provide up-to-the-minute information, such as the number of messages a user may have. Whereas badges have an oval shape and have no classes for color stylings, labels have rounded corners and the typical class
+                color schemes.
+            </p>
+            <code>&lt;span class="badge">2,000&lt;span></code>
+            <br>Inbox <span class="badge">2,000</span>
+            <br><code>&lt;span class="label label-primary">NEW!&lt;span></code>
+            <br>Google glasses<span class="label label-primary">NEW!</span>
+            <br><code>&lt;span class="label label-default">IMPROVED!&lt;span></code>
+            <br>Healthcare.gov<span class="label label-default">IMPROVED!</span>
+            <br><code>&lt;span class="label label-success">APPROVED!&lt;span></code>
+            <br>Your loan<span class="label label-success">APPROVED!</span>
+            <br><code>&lt;span class="label label-info">EXPENSIVE!&lt;span></code>
+            <br>iPhone 10<span class="label label-info">EXPENSIVE!</span>
+            <br><code>&lt;span class="label label-warning">UNDER CONSTRUCTION!&lt;span></code>
+            <br>My website<span class="label label-warning">UNDER CONSTRUCTION!</span>
+            <br><code>&lt;span class="label label-danger">BREAKING NEWS!&lt;span></code>
+            <br>Every tweet from the President <span class="label label-danger">BREAKING NEWS!</span>
+
+        </div>
+        <div class="container-fluid" id="progressbar">
+            <h3>Progress Bars</h3>
+            <p> Can be used to show progress in filing out a form or completing a test </p>
+            <code>&lt;div class="progress"><br>&lt;div class="progressbar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:70%">33% complete</code>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%">33% complete
+                </div>
+            </div>
+            <h4>Progress bar colors</h4>
+            <code>"progress-bar progress-bar-success -danger -warning -info"</code>
+            <h4>Striped Progress Bar</h4>
+            <code>"progress-bar progress-bar-success progress-bar-striped"</code>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%">33% complete
+                </div>
+            </div>
+            <h4>Animated Progress Bar</h4>
+            <code>"progress-bar progress-bar-success progress-bar-striped active"</code>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%">33% complete
+                </div>
+            </div>
+            <h4>Stacked Progress Bar</h4>
+            <p>Put several progress bars of differing colors inside of your <code>&lt;div class="progress"></code>tag</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%">Internal Storage
+                </div>
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%">Other Storage
+                </div>
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:34%">External Storage
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container-fluid" id="pagination">
+            <h3>Pagination</h3>
+            <h5>Used to navigate between several pages</h5>
+            <code>&lt;ul class="pagination"></code> + <code>&lt;li>&lt;a href="#">1...</code>
+            <h5>To highlight the current page:</h5>
+            <code>&lt;li class="active"></code>
+            <h5>To disable a page:</h5>
+            <code>&lt;li class="disabled"></code>
+            <h5>To resize:</h5>
+            <code>&lt;ul class="pagination pagination-lg -sm"></code>
+            <br>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li class="active"><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+
+            </ul>
+            <h4>Breadcrumbs<small style="color:white"> -used to show file hierarchy</small></h4>
+            <code>&lt;ul class="breadcrumb"></code> + <code>&lt;li>&lt;a href="#"</code><br><br>
+            <ul class="breadcrumb">
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Grammar</a></li>
+                <li><a href="#">Weekly Materials</a></li>
+                <li><a href="#">Week 1</a></li>
+            </ul>
+        </div>
+        <div class="container-fluid" id="pager">
+            <h3>Pager<small style="color:#FFF"> A "previous" and "next" navigation system</small> </h3>
+            <code>&lt;ul class="pager"></code> + <code>&lt;li>&lt;a>Previous...</code> + <code>...Next...</code>
+            <p>Makes "Previous" and "Next" buttons aligned in the center</p>
+            <ul class="pager">
+                <li><a href="#">Previo</a></li>
+                <li><a href="#">Siguiente</a></li>
+            </ul>
+            <code>&lt;ul class="pager"></code> + <code>&lt;li class="previous">&lt;a>Previous...</code> + <code>...class="next"...</code>
+            <p>Puts the buttons on the left and right</p>
+            <ul class="pager">
+                <li class="previous"><a href="#">Previo</a></li>
+                <li class="next"><a href="#">Siguiente</a></li>
+            </ul>
+        </div>
+        <div class="container-fluid" id="listgroups">
+            <h3>List Groups <small style="color:#FFF">-grouping content in interesting and useful ways</small></h3>
+            <h5>Here's the basic code:</h5>
+            <code>&lt;ul class="list-group"></code> + <code>&lt;li class="list-group-item></code>
+            <h5>A hover state is created on list item links</h5>
+            <code>&lt;ul class="list-group"></code> + <code>&lt;a class="list-group-item></code>
+            <ul class="list-group">
+                <li><a href="#" class="list-group-item">Planes</a></li>
+                <li><a href="#" class="list-group-item">Trains</a></li>
+                <li><a href="#" class="list-group-item">Automobiles</a></li>
+                <li><a href="#" class="list-group-item">Horses</a></li>
+            </ul>
+            <h5>You can add <code>active</code> and <code>diabled</code> states when you use a <code>div</code> tag instead of a <code>ul</code> tag</h5>
+            <h5>You can also quickly add colors to list items with <code>list-group-item-success -info</code> etc.</h5>
+            <h5>If you add a badge to a list item, it will align right</h5>
+
+        </div>
+        <div class="container-fluid" id="panels">
+            <h3>Panels</h3>
+            <h5>Can be used to display a greater amount of content</h5>
+            <code>&lt;div class=panel panel-default"></code> + <br>
+            <code>&lt;div class="panel-heading"></code>
+            <code>&lt;div class="panel-body"></code>
+            <code>&lt;div class="panel-footer"></code>
+            <h5>To keep several panels together with less of a margin between each</h5>
+            <code>&lt;div class="panel-group"></code> + <code>&lt;div class="panel panel-(color)</code>
+            <h5>You can also add the typical bootrap colors</h5>
+            <code>&lt;div class="panel panel-success -danger"</code> etc.
+            <br><br>
+            <div class="panel panel-danger">
+                <div class="panel panel-heading">Nebraska</div>
+                <div class="panel panel-body" style="color:#000">Nebraska is a state situated in the middle of the United States. It is unique in several ways. For example, it has a non-partisan, single chamber legislature, called the unicameral. It's also home to Warren Buffett, one of the richest
+                    people in the world.
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid" id="dropdowns">
+            <h3>Dropdowns</h3>
+            <p>Dropdowns look a bit more code intensive to me. Here's the code</p>
+            <code>&lt;div class="dropdown"></code> + <code>&lt;button or a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Title&lt;span class="caret">&lt;/span>&lt;/button></code> + <code>&lt;ul class="dropdown-menu">&lt;li...</code>
+            <h5><code>&lt;li></code> classes</h5>
+            <code>"divider"</code> -adds separator in the menu<br>
+            <code>"dropdown-header"</code> -as you might expect, formats a link as a header<br>
+            <code>"active"</code>
+            <code>"disabled"</code>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Programs<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">English for Academic </li>
+                    <li><a href="#">Listening/Speaking</a></li>
+                    <li><a href="#">Reading/Writing</a></li>
+                    <li><a href="#">Applying Grammar</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">ITA English</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Graduate English Skills Program</a></li>
+                </ul>
+            </div>
+            <h5>To make a menu accessible</h5>
+            Add <code>role="menu" aria-labelledby="(whatever id you give to your button or a)"</code> to your <code>&lt;ul></code> class, <code>role="presentation"</code> to every <code>&lt;li></code>, and finally <code>role="menuitem"</code> to your
+            <code>&lt;a></code> tags.
+            <h5>To make a menu raise up</h5>
+            Use <code>&lt;div class="dropup"></code>
+
+        </div>
+        <div class="container-fluid" id="collapse">
+            <h3>Collapse<small>an easy way hide and display information</small></h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a data-toggle="pill" href="#Use1">Hidden</a></li>
+                        <li><a data-toggle="pill" href="#Use2">Not hidden</a></li>
+                        <li><a data-toggle="pill" href="#Use2b">Collapsible panel</a></li>
+                        <li><a data-toggle="pill" href="#Use3">List  group</a></li>
+                        <li><a data-toggle="pill" href="#Use4">Accordion</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade in active" id="Use1">
+                            <p>CODE:</p>
+                            <code>&lt;button class="btn" data-toggle="collapse" data-target="#colbutton"></code> + Button name <br> <code>&lt;div id="#colbutton" class="collapse"></code> + Content
+                            <p>EXAMPLE:</p><button class="btn" data-toggle="collapse" data-target="#colbutton">Button Name</button>
+                            <div id="colbutton" class="collapse">Content</div>
+                        </div>
+                        <div id="Use2" class="tab-pane fade in">
+                            <p>CODE:</p>
+                            <code>&lt;button class="btn" data-toggle="collapse" data-target="#colbutton"></code> + Button name <br> <code>&lt;div id="#colbutton" class="collapse in"></code> + Content
+                            <p>EXAMPLE:</p><button class="btn" data-toggle="collapse" data-target="#colbutton2">Button Name</button>
+                            <div id="colbutton2" class="collapse in">This is the content that will disappear after you click the button.</div>
+
+                        </div>
+                        <div id="Use2b" class="tab-pane fade in">
+                            <p>CODE:</p>
+                            <code>&lt;div class="panel panel-default"><br>
+        &lt;div class="panel-heading"><br>
+          &lt;a data-toggle="collapse" href="#panelcol">Panel Title&lt;/a>
+       <br> &lt;/div>
+        <br>&lt;div id="panelcol" class="panel-collapse collapse">
+       <br> &lt;div class="panel-body">Content of the panel&lt;/div>
+         <br> &lt;div class="panel-footer">Footer of the panel&lt;/div>
+        &lt;/div></code>
+                            <p>EXAMPLE:</p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a data-toggle="collapse" href="#panelcol">Panel Title</a>
+                                </div>
+                                <div id="panelcol" class="panel-collapse collapse">
+                                    <div class="panel-body">Content of the panel</div>
+                                    <div class="panel-footer">Footer of the panel</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Use3" class="tab-pane fade in">
+                            <p>You can click on a header to open up a list group. You just have to add the list ass part of a panel body. Here's the code:</p>
+                            <code>&lt;div class="panel panel-default"><br>
+        &lt;div class="panel-heading"><br>
+          &lt;a data-toggle="collapse" href="#listitems">Panel Title&lt;/a>
+       <br> &lt;/div>
+        <br>&lt;div id="listitems" class="panel-collapse collapse">
+       <br>&lt;ul class="list-group"....
+         <br> &lt;div class="panel-footer">Footer of the panel&lt;/div>
+        &lt;/div></code>
+                            <p>EXAMPLE:</p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a data-toggle="collapse" href="#listitems">Click to see the list</a>
+                                </div>
+                                <div id="listitems" class="panel-collapse collapse">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Something</li>
+                                        <li class="list-group-item">Another thing</li>
+                                        <li class="list-group-item">Something else</li>
+                                        <li class="list-group-item">The last thing</li>
+                                    </ul>
+                                    <div class="panel-footer">Something at the end</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="Use4" class="tab-pane fade in">
+                            <p>An accordion in this case is like a group of collapsible panels where the other panels close when another is opened. A literal accordion doesn't work that way at all, but I guess they couldn't come up with a better name. Here's
+                                the code.</p>
+                            <code>&lt;div class="panel-group id="parent">
+        <br>&lt;div class="panel panel-default"><br>
+        &lt;div class="panel-heading"><br>
+          &lt;a data-toggle="collapse" href="#panelcol" id="parent">Panel Title&lt;/a>
+       <br> &lt;/div>
+        <br>&lt;div id="panelcol" class="panel-collapse collapse">
+       <br> &lt;div class="panel-body">Content of the panel&lt;/div>
+         <br> &lt;div class="panel-footer">Footer of the panel&lt;/div>
+        &lt;/div></code>+ more collapsible panels
+                            <p>EXAMPLE:</p>
+                            <div class="panel-group" id="parentZ">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#parentZ" href="#panelcolA">Panel Title 1</a>
+                                    </div>
+                                    <div id="panelcolA" class="panel-collapse collapse">
+                                        <div class="panel-body">Content of the panel</div>
+                                        <div class="panel-footer">Footer of the panel</div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#parentZ" href="#panelcolB">Panel Title 2</a>
+                                    </div>
+                                    <div id="panelcolB" class="panel-collapse collapse">
+                                        <div class="panel-body">Content of the panel</div>
+                                        <div class="panel-footer">Footer of the panel</div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#parentZ" href="#panelcolC">Panel Title</a>
+                                    </div>
+                                    <div id="panelcolC" class="panel-collapse collapse">
+                                        <div class="panel-body">Content of the panel</div>
+                                        <div class="panel-footer">Footer of the panel</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="tabspills">
+            <h3>Tabs and Pills</h3>
+            <h4>Tabs: like folder tabs in a filing system</h4>
+            <p>Code:</p>
+            <code>&lt;ul class="nav nav-tabs">
+    <br>&lt;li class="active">&lt;a href="#">Home&lt;/a>&lt;/li>
+    <br>&lt;li>&lt;a href="#">Away&lt;/a>&lt;/li>
+    <br>&lt;li>&lt;a href="#">Vacation&lt;/a>&lt;/li>
+    <br>&lt;li>&lt;a href="#">Work&lt;/a>&lt;/li>
+  <br>&lt;/ul></code>
+
+            <p>EXAMPLE:
+                <p>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Away</a></li>
+                        <li><a href="#">Vacation</a></li>
+                        <li><a href="#">Work</a></li>
+                    </ul>
+                    <p>NOTE: Tabs can also contain dropdowns. Just add your code to the &lt;a> code in the tab and the rest is the same as any other dropdown. See the <a href="#dropdowns">dropdown</a> section for more information.</p>
+                    <h4>Pills: have the same function as tabs but they look more like buttons</h4>
+                    <p>CODE:
+                        <p>
+                            <code>&lt;ul class="nav nav-pills">
+    <br>&lt;li class="active">&lt;a href=#>Home&lt;/a>&lt;/li>
+    <br>&lt;a href=#>&lt;li>Roster&lt;/a>&lt;/li>
+    <br>&lt;a href=#>&lt;li>Schedule&lt;/a>&lt;/li>
+    <br>&lt;a href=#>&lt;li>Stats&lt;/a>&lt;/li>
+    <br>&lt;/ul></code>
+                            <p>EXAMPLE:</p>
+                            <ul class="nav nav-pills">
+                                <li class="active"><a href=#>Home</a></li>
+                                <li><a href=#>Roster</a></li>
+                                <li><a href=#>Schedule</a></li>
+                                <li><a href=#>Stats</a></li>
+                            </ul>
+                            <h4>Vertical Pills</h4>
+                            <p>Pills can be stacked vertically by adding <code>nav-stacked</code> to your &lt;ul> class.
+                                <h4>Pills with Dropdowns</h4>
+                                <p>As with tabs, you can add the dropdown to any &lt;a> tag</p>
+                                <h4>Justified Tabs and Pills</h4>
+                                <p>To spread your tabs or pills across their parent element just add the class <code>nav-justified</code>.
+                                </p>
+                                <h4>Toggleable Tabs and Pills</h4>
+                                <p> This is a way to put a lot of content on one page without having to click on a link to a new page. The process is a bit more code intensive but leads to a more dynamic page. Here are the basic steps:</p>
+                                <ol>
+                                    <li>Add <code>data-toggle="tab"</code> to every &lt;a> tag in your list.</li>
+                                    <li>Put all your hidden panes in a &lt;div> of class <code>tab-content</code>.</li>
+                                    <li>Create a separate &lt;div> for each toggleable pane with class <code>tab-pane</code>.</li>
+                                    <li>Add an <code>id</code> to each of your toggleable tab divs and make a link to each of them in your ablove list.</li>
+                                    <li>Add and <code>active</code> state to your first list item and first tab pane div.</li>
+                                    <li>OPTIONAL: Add a <code>fade in</code> class to each of your tab panes.</li>
+                                </ol>
+        </div>
+        <div class="container-fluid" id="navbar">
+            <h3>Navbar<small style="color:white"> -menu bars that enable navigation through a page or site</small></h3>
+            <h4>Navbar Components</h4>
+            <ol>
+                <li><strong>Outer shell:</strong> All of the code should fit within a <code>&lt;nav class="navbar navbar-default">&lt;/nav></code> tag (Whitish background) or a <code>&lt;nav class="navbar navbar-inverse">&lt;/nav></code> tag (Black background)</li>
+                <li><strong>Inner shell:</strong> Put the remaining components in a <code>&lt;div class="container-fluid"></code> shell to keep everything on one line.
+                </li>
+                <li><strong>The Brand:</strong> To format the space for putting the name of the page or logo, you can use a <code>&lt;div class="navbar-header"></code> tag and give your &lt;a> a class of <code>navbar-brand</code>.</li>
+                <li><strong>The Links:</strong> Put all your menu items in a <code>&lt;ul></code> with a class of <code>nav navbar-nav</code>.
+                    <ol>
+                        <li>NOTE: you can align your list to the right of the screen by giving your <code>&lt;ul></code> an additional class of <code>navbar-right</code>.</li>
+                        <li>You can also highlight the active page by giving your <code>&lt;li></code> a class of <code>active</code>.</li>
+                    </ol>
+                </li>
+            </ol>
+            <h4>Navbar Tweaks</h4>
+            <ol>
+                <li><strong>Dropdowns:</strong> add <code>class="dropdown-toggle data-toggle="dropdown" href="#"&lt;span class="caret"...</code> to the <code>&lt;a></code> tag in the list item where you want your dropdown. Then, add <code>class="dropdown-menu"</code>                    to the <code>&lt;ul> </code> tag of your list.</li>
+                <li><strong>Buttons:</strong> use class <code>btn btn-(color) navbar-btn</code> with your <code>&lt;button></code> tag.</li>
+                <li><strong>Forms:</strong> use class <code>navbar-form (navbar-left)</code> to your <code>&lt;form></code> tag.</li>
+                <li><strong>Other text:</strong> any other text inside of a navbar should have the class of <code>navbar-text</code> in the <code>&lt;p></code> or <code>&lt;h></code> tag to align the text vertically within the bar. </li>
+                <li><strong>Collapsing:</strong> for smaller screens, the navbar usually cannot fit across the top of the screen. To fix this issue, you can make the navbar collapse and be replaced by a clickable icon which will give access to a vertical
+                    list of the menu items. Here is the code:
+                    <ul>
+                        <li>This is code for the button that will appear.</li>
+                        <li>
+                            <code>&lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#(ID given to menu)">
+        <br>&lt;span class="icon-bar">&lt;/span>
+        <br>&lt;span class="icon-bar">&lt;/span>
+        <br>&lt;span class="icon-bar">&lt;/span></code>
+                        </li>
+                        <li>Using the following code, put a div around the area of the menu that you want to collapse.</li>
+                        <li><code>&lt;div class="collapse navbar-collapse" id="(same as ID in the button code)">...</code>
+
+                    </ul>
+                    </li>
+            </ol>
+
+        </div>
+        <div class="container-fluid" id="forms">
+            <h3>Forms <small>-make your website interactive</small></h3>
+            <p>The functions of forms and inputs are somwhat intertwined, at least that's the way I am understanding them as I am learning. To my understanding, forms are basically groups of inputs, so this section will be about how to create a layout for
+                groups of inputs using Bootstrap.
+                <p>
+                    <div class="panel panel-default" style="color:black">
+                        <div class="panel-heading">
+                            <h4>Helpful tips for forms</h4>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p><strong>To make inputs span their parent element by 100%:</strong></p>
+                                <p>--Add <code>class="form-control"</code> to any <code>&lt;input></code>, <code>&lt;textarea></code>, or <code>&lt;select></code> tags. (A.K.A. textual tags.</p>
+                                <p>--Put each <code>&lt;label></code> and <code>&lt;input></code> inside a separate <code>&lt;div class="form-group"></code>. Doing so will place your label above each text area
+                            </li>
+                            <li class="list-group-item">
+                                <p><strong>Vertical Forms:</strong></p>
+                                <p>Vertical Forms are the default setting for Bootstrap forms, so all you need to do is put everything inside a <code>&lt;form></code> tag, and of course, follow the tips above. This will arrange your form elements such that
+                                    the label will be placed above all of your inputs.</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p><strong>Horizontal Forms:</strong></p>
+                                <p>In a horizontal form, labels are aligned right along the edge of each input. If the screen size is decreased, the labels automatically move above each input. It is also necessary to use a bootstrap grid to align your form
+                                    elements. Here are some steps for achieving this:</p>
+                                <ol>
+                                    <li>Give your <code>&lt;form></code> element a class of <code>form-horizontal</code>.</li>
+                                    <li>Give each <code>&lt;label></code> element a class of <code>control-label</code>.</li>
+                                    <li>As with other types of forms, make sure to put each <code>&lt;label></code> and <code>&lt;input></code> inside a separate <code>&lt;div class="form-group"></code> and add <code>class="form-control"</code> to any <code>&lt;input></code>,
+                                        <code>&lt;textarea></code>, or <code>&lt;select></code> tags.
+                                </ol>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><strong>Inline Forms:</strong></p>
+                                    <p>Inline forms take up one line of a full screen. This is most useful for an unobtrusive login form. You only need to give your <code>&lt;form></code> element a class of <code>form-inline</code>.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><strong>Screen Readability:</strong></p>
+                                    <p>It is very important to ensure that your form can be read by a screen reader. That means having labels for every input. If you want to create a form that has placeholders for labels, you can give your labels a class
+                                        of <code>sr-only</code> so the labels will be visible only to screen readers.</p>
+                                </li>
+                        </ul>
+                    </div>
+        </div>
+        <div class="container-fluid" id="inputs">
+            <h3>Inputs - <code>&lt;input> &lt;textarea> &lt;checkbox> &lt;radio> &lt;select></code></h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>1. Input Types</h4>
+                    <p>Inside an i<code>&lt;input></code> tag, you can add any of the following typs to ensure proper styling of the input. Here are the supported types.</p>
+                    <ul>
+                        <li>password</li>
+                        <li>datetime</li>
+                        <li>datetime-local</li>
+                        <li>date</li>
+                        <li>month</li>
+                        <li>time</li>
+                        <li>week</li>
+                        <li>number</li>
+                        <li>email</li>
+                        <li>URL</li>
+                        <li>search</li>
+                        <li>tel</li>
+                        <li>color</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>2. Text Areas</h4>
+                    <p>Text areas are used for paragraph style entry. Here's the code for bootstrap:</p>
+                    <p><code>&lt;textarea class="form-control"></code></p>
+                    <p>You can also specify <code>rows</code> in your <code>&lt;textarea></code> tag</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="brilliant">Brilliant Comment:</label>
+                            <textarea class="form-control" placeholder="Enter your brilliant comment here" rows="5" cols="30" id="brilliant"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>3. Checkboxes</h4>
+                    <p>Checkboxes are used in forms where a person can select any number of a list of items. They can be vertical or inline.</p>
+                    <p><strong>Vertical: (Default)</strong></p>
+                    <p><code>&lt;div class="checkbox">
+        <br>&lt;label>&lt;input type="checkbox"...</code></p>
+                    <form action="#">
+                        <div class="checkbox">
+                            <label><input type="checkbox">Ketchup</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox">Mustard</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox">Relish</label>
+                        </div>
+                    </form>
+                    <p><strong>Inline:</strong></p>
+                    <p><code>&lt;div class="checkbox-inline">...</code></p>
+                    <form action="#">
+                        <div class="checkbox-inline">
+                            <label><input type="checkbox">1</label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label><input type="checkbox">2</label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label><input type="checkbox">3</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>4. Radio Buttons</h4>
+                    <p> Radio buttons allow a user to select ONE ONE of a list of options. As with checkboxes, radio buttons can also be vertical or inline.</p>
+                    <p><strong>Vertical</strong></p>
+                    <code>&lt;div class="radio>
+        <br>&lt;label>&lt;input type="radio" name="optradio"></code>
+                    <form action="#">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">1</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">2</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">3</label>
+                        </div>
+                    </form>
+                    <p><strong>Inline</strong></p>
+                    <code>&lt;div class="radio>
+        <br>&lt;label>&lt;input type="radio" name="optradio"></code>
+                    <form action="#">
+                        <div class="radio-inline">
+                            <label><input type="radio" name="optradio">1</label>
+                        </div>
+                        <div class="radio-inline">
+                            <label><input type="radio" name="optradio">2</label>
+                        </div>
+                        <div class="radio-inline">
+                            <label><input type="radio" name="optradio">3</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>5. Select List</h4>
+                    <p>A select list is used when there are too many options to list visibly, such as choosing a state or country. Using a <code>&lt;select.</code> tag creates a dropdown where one or more options can be selected. </p>
+                    <p><strong>Single Selection:</strong></p>
+                    <code>&lt;select class="form-control" id="#">
+        <br>&lt;option>Alabama&lt;/option></code>
+                    <br>etc.
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="1">State:</label>
+                            <select class="form-control" id="1">
+            <option>Alabama</option>
+            <option>Alaska</option>
+            <option>Arizona</option>
+            <option>Arkansas</option>
+          </select>
+                        </div>
+                    </form>
+                    <p><strong>Multiple Selection:</strong></p>
+                    <code>&lt;select multiple class="form-control" id="#">
+        <br>&lt;option>Powerpoint&lt;/option></code>
+                    <br>etc.
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="2">Choose specialties (hold <kbd>ctrl</kbd> or <kbd>shift</kbd> and click to choose multiple):</label>
+                            <select multiple class="form-control" id="2">
+            <option>PowerPoint</option>
+            <option>Excel</option>
+            <option>Roundhouse Kicks</option>
+            <option>Gangnam Style</option>
+            <option>Rocket Science</option>
+          </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>6. Static Control</h4>
+                    <p>I haven't really understood the usefulness of static control yet, but here's what I understand. Static control can be used to leave an input "pre-filled" and with proper formatting. I guess it could be used to show the username of
+                        a returning user or soemthing like that. It is also supposed to be used with horizontal forms, but I don't know that it would be necessary with vertical or inline forms.</p>
+                    <p>Just replace your input with a <code>&lt;p></code> element of class <code>form-control-static</code></p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>7. Input Groups</h4>
+                    <p>This groups a bordered icon together in the left side on an input. This can be done instead of adding a label.</p>
+                    <code>&lt;div class="input-group"></code>instead of <code>"form-group"</code>
+                    <br><code>&lt;span class="input-group-addon">&lt;i class="glyphicon...
+        <br>&lt;input...
+        <br>&lt;/div...</code>
+                    <form action="#">
+                        <p>The icon can be moved to the right simply by transposing the
+                            <code>&lt;span></code> and <code>&lt;input></code> elements.
+                            <p>EXAMPLE:</p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input id="email" type="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                    </form>
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>8. Input Group Buttons</h4>
+                    <p>Instead of an icon you can add a button to an input field. This is commonly used for search button.</p>
+                    <code>&lt;div class="input-group">
+        <br>&lt;input class="form-control" name="text" id="search" type="search">
+        <br>&lt;div class="input-group-btn">
+        <br>&lt;button>...
+        <br>&lt;i>...
+      </code>
+                    <br><br>
+                    <form action="#">
+                        <div class="input-group">
+                            <input class="form-control" id="search" type="search" placeholder="searchaway!">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <h4>9. Control States</h4>
+                    <p>Control States can be used to show issues with input areas or fieldsets. Here are the different states:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Disabled Input:</strong></p>
+                            <p>Add<code>disabled</code> to your <code>&lt;input></code> tag.</p>
+                            <p>Alternatively, you can use the <code>readonly</code> attribut much to the same effect.</p>
+                            <form action="#">
+                                <div class="form-group">
+                                    <label for="notenabled">Disabled</label>
+                                    <input class="form-control" id="notenabled" disabled placeholder="Nuh-uh! can't use this!">
+                                </div>
+                            </form>
+                        </li>
+                        <li>
+                            <p><strong>Disabled Form</strong></p>
+                            <p>Add <code>disabled</code> to the <code>&lt;fieldset></code> tag.</p>
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    <label for="nofield">Zip</label>
+                                    <input class="form-control" type="number" id="nofield" placeholder="Not in here!">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nofield2">State</label>
+                                    <select class="form-control" id="nofield2">
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+              </select>
+                                </div>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <p><strong>Success, warning, and error with icons:</strong></p>
+                            <code>&lt;div class="form-group</code> +
+                            <br><code>has-success</code>,
+                            <br><code>has-warning</code>,
+                            <br>or <code>has-error</code>
+                            <br>+
+                            <br><code>has-feedback</code>
+                            <br>Then...
+                            <br><code>&lt;span class="form-control-feedback glyphicon gl...</code>
+                            <form action="#">
+                                <div class="form-group has-success has-feedback">
+                                    <input class="form-control" type="text">
+                                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                </div>
+                                <div class="form-group has-warning has-feedback">
+                                    <input class="form-control" type="text">
+                                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                                </div>
+                                <div class="form-group has-error has-feedback">
+                                    <input class="form-control" type="text">
+                                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                </div>
+                            </form>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+            <h4>10. Resizing Inputs</h4>
+            <ol>
+                <li><strong>Field Height (Individual Field):</strong> Add <code>input-sm</code> or <code>input-lg</code> to your <code>&lt;input></code> class.</li>
+                <li><strong>Horizontal Form:</strong>Adding <code>form-group lg</code> or <code>form-group-sm</code> to a <code>&lt;div class="form-group</code> will resize both labels and inputs.</li>
+                <li><strong>Input Group:</strong> Addubg <code>input-group-lg</code> or <code>input-group-sm</code> to a <code>&lt;div class="input-group</code> will resize the input as well as the button or text.</li>
+
+            </ol>
+            <h4>11. Help Text</h4>
+            <p>Adds a smaller line of text below an input where instructions can be tions can be written. </p>
+            <code>&lt;span class="help-block>Expanatory Text&lt;/span></code>
+        </div>
+        <div class="container-fluid" id="mediaobjects">
+            <h3>Media Objects</h3>
+            <p>These attributes seem to be designed with the idea of aligning profile photo icons with written media, both horizontally and vertically.</p>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                    <h4>Horizontal Alignment</h4>
+                    <ol>
+                        <li><strong>Left Align:</strong>
+                            <br><code>&lt;div class="media">
+      <br>&lt;div class="media-left">
+      <br>&lt;img src="#" class="media-object" style="width:60px"></code>
+                            <br>+
+                            <code>&lt;div class="media-body">
+        <br>&lt;h4 class="media-heading...
+        <br>&lt;p></code>...
+                        </li>
+                        <li><strong>Right Align:</strong>
+                            <br> <code>&lt;div class="media-body">
+        <br>&lt;h4 class="media-heading...
+        <br>&lt;p></code>...
+                            <br>+
+                            <br><code>&lt;div class="media">
+      <br>&lt;div class="media-right">
+      <br>&lt;img src="#" class="media-object" style="width:60px"></code>
+                        </li>
+
+                    </ol>
+
+                    <h4>Vertical Alignment</h4>
+                    <ol>
+                        <li><strong>Top Align:</strong>
+                            <br>Add class <code>media-top</code> to your <code>&lt;div class="media-left/right</code>.
+                        </li>
+                        <li><strong>Middle Align:</strong>
+                            <br>Add class <code>media-middle</code> to your <code>&lt;div class="media-left/right</code>.
+                        </li>
+                        <li><strong>Bottom Align:</strong>
+                            <br>Add class <code>media-bottom</code> to your <code>&lt;div class="media-left/right</code>.
+                        </li>
+                    </ol>
+                    <h4>Nesting</h4>
+                    <p>This allows a comment to be nexted ested inside another comment, much the same way an outline would work with subtopics</p>
+                    <p><strong>How?</strong> Just put a new <code>&lt;div class="media"></code> inside the <code>&lt;div class="media-body"></code> this is being commented on.</p>
+                    <h5>Nested Media Example</h5>
+                    <div class="well" style="color:#000">
+                        <div class="media">
+                            <div class="media-left"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack</h4>
+                                <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+                                    All work and no play makes Jack a dull boy.</p>
+
+                                <div class="media" style="color:#000">
+                                    <div class="media-left"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">John</h4>
+                                        <p>Are you okay, Jack?</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h4>Examples</h4>
+                    <h5>Left Align</h5>
+                    <div class="well" style="color:#000">
+                        <div class="media">
+                            <div class="media-left"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack</h4>
+                                <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+                                    All work and no play makes Jack a dull boy.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Right Align</h5>
+                    <div class="well" style="color:#000">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack</h4>
+                                <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+                                    All work and no play makes Jack a dull boy.</p>
+
+                            </div>
+                            <div class="media-right"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <h5>Top Align</h5>
+                    <div class="well" style="color:#000">
+                        <div class="media">
+                            <div class="media-left media-top"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack</h4>
+                                <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+                                    All work and no play makes Jack a dull boy.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Middle Align</h5>
+                    <div class="well" style="color:#000">
+                        <div class="media">
+                            <div class="media-left media-middle"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack</h4>
+                                <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+                                    All work and no play makes Jack a dull boy.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <h5>Bottom Align</h5>
+                    <div class="well" style="color:#000">
+                        <div class="media">
+                            <div class="media-left media-bottom"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1154746/profile/profile-512.jpg" class="media-object" style="width:60px" alt="Photo of Todd">
+
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack</h4>
+                                <p>All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+                                    All work and no play makes Jack a dull boy.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="carousel">
+            <h3>Carousel</h3>
+
+            <h4>Necessary Components</h4>
+            <ol>
+                <li>Code that calls on the carousel function </li>
+                <li>Code that brings up the media and captions</li>
+                <li>Code that brings up controls</li>
+            </ol>
+            <div class="well" style="color:#808000">
+                <h4>Step 1: Wrap everything in a <code>&lt;div id="(You Decide)" class="carousel slide" data-ride="carousel"></code> tag.</h4>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="well" style="color:#808000">
+                        <h4>Step 2: The Carousel Funtion</h4>
+                        <ol>
+                            <li>Put your list items in a <code>&lt;ol class="carousel-indicators"></code> tag. </li>
+                            <li>For each slide of your carousel, use the following code: <code>&lt;li data-target="#(You decide)" data-slide-to="0" class="active"></code></li>
+                            <li>For all subsequent slides, eliminate the <code>&lt;class="active"</code> attribute and increase the <code>data-slide-to</code> by one.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="well" style="color:#808000">
+                        <h4>Step 3: Adding Media and Captions</h4>
+                        <ol>
+                            <li>Put all your media in a <code>&lt;div class="carousel-inner"></code> tag.</li>
+                            <li>Put each media item in a <code>&lt;div class="item"></code> and give your first item a class of <code>active</code>.</li>
+                            <li>Add your <code>&lt;img src</code> and give it <code>style="width:100%"</code>.</li>
+                            <li>Put your captions in a <code>&lt;div class="carousel-caption"></code> tag. Then you can put any size header or caption in, and it will be overlayed on the image.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="well" style="color:#808000">
+                        <h4>Step 4: Add controls</h4>
+                        <ol>
+                            <li>For the left control use an <code>&lt;a class="left carousel-control" href="#(YouDecide)" data-slide="prev"></code> tag.</li>
+                            <li>Inside the <code>&lt;a></code> tag, add two spans:
+                                <ol>
+                                    <li><code>&lt;span class="glyphicon glyphicon-chevron-left">&lt;/span></code></li>
+                                    <li><code>&lt;span class="sr-only">Previous&lt;/span></code>
+                                </ol>
+                                </li>
+                                <li>For the right side controls, just change all the <code>left</code>s to <code>right</code>, <code>"prev"</code> to <code>"next"</code>, and Previous to Next.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Indicator-->
+        <div id="ExCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#ExCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#ExCarousel" data-slide-to="1"></li>
+                <li data-target="#ExCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!--Wrapper-->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="https://drive.google.com/uc?id=0B0Tdvk_fqJ-mMGp0a2oxZ210eXM" style="width:100%" alt="Chilean flower">
+                    <div class="carousel-caption">
+                        <h3>First Picture</h3>
+                        <p>Picture Decription</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://drive.google.com/uc?id=0B0Tdvk_fqJ-mSnFybWZGWGQ0elU" alt="Puerto Montt, Chile" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Second Picture</h3>
+                        <p>Picture Decription</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://drive.google.com/uc?id=0B0Tdvk_fqJ-mS2pZWE9sNDhsZ2s" alt="Castro, Chile" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Third Picture</h3>
+                        <p>Picture Decription</p>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#ExCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#ExCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="container-fluid" id="modals">
+            <h3>Modals <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#toddModal">Click me!  I'm a Modal Trigger!</button> </h3>
+            <div id="toddModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-header" style="color:#000">Modals</h3>
+                        </div>
+                        <div class="modal-body" style="color:#000">
+                            <h4>This is my first modal</h4>
+                            <p>As such I don't have much to say here, I will instead just leave you with this photo of a squirrel.</p>
+                            <p style="text-align:center"><img src="https://drive.google.com/uc?id=0B0Tdvk_fqJ-mNkcxRHhiVl9CZEE" style="width:250px" class="img-thumbnail" alt="picture of a squirrel">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Modals are popup windows within a page. Clicking anywhere outside the windowor clicking any of the "close buttons will close the modal, so they are very intuitive to use even for people not accostomed to surfing the internet. From what I have
+                learned, modals have two main components: a trigger to open the modal and the content of the modal.</p>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="well" style="color:#000">
+                        <h4>Trigger</h4>
+                        <ul>
+                            <li>To a <code>&lt;button></code> or <code>&lt;a></code> tag, add the following attributes:
+                                <ol>
+                                    <li><code>type="button"</code></li>
+                                    <li><code>class="btn btn-(state) btn-(size)"</code></li>
+                                    <li><code>data-toggle="modal"</code></li>
+                                    <li><code>data-target="(You decide)"</code></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="well" style="color:#000">
+                        <h4>Modal Content</h4>
+                        <h5>Add the following divs:</h5>
+                        <ol>
+                            <li>There are three outer tags
+                                <ol>
+                                    <li><code>&lt;div id="(You Decide)" class="modal fade" role="dialog"></code></li>
+                                    <li><code>&lt;div class="modal-dialog"></code> to which can be added the classes <code>modal-lg</code> or <code>modal-sm</code> to resize the popup box.</li>
+                                    <li><code>&lt;div class="modal-content"></code></li>
+                                </ol>
+                            </li>
+                            <li>Inside these tags you will put:
+                                <ol>
+                                    <li><code>&lt;div class="modal-header"></code>
+                                        <ol>
+                                            <li>A close button using
+                                                <br><code>&lt;button type="button class="close" data-dismiss="modal">& times;&lt;/button</code></li>
+                                            <li>An optional header using <code>&lt;h class="modal-title"></code></li>
+                                        </ol>
+                                    </li>
+                                    <li>The body using <code>&lt;div class="modal-body"></code></li>
+                                    <li>The footer using <code>&lt;div class="modal-footer"></code>
+                                        <ol>
+                                            <li>A close button using <code>&lt;button type="button" class="btn-btn-default" data dismiss="modal">Close&lt;/button></code></li>
+                                        </ol>
+                                    </li>
+
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="tooltips">
+            <h3>Tooltips</h3>
+            <p>Tooltips need jquery to work properly. They are basically just tips that appear when you hover ofver the text that is designated with the tooltip data toggle.</p>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+
+                    <h4>How to code a tooltip</h4>
+                    <p>A tooltip needs to be placed in an <code>&lt;a></code> tag. In addition, you have to add some Javascript in order to enable the tooltip stylings for the page. </p>
+                    <h4>HTML</h4>
+                    <p><code>&lt;a href="javascript://" data-toggle="tooltip" title="(Text that will appear in the tooltip)"></code> + LINKED TEXT + <code>&lt;/a></code></p>
+                    <h4>Javascript</h4>
+                    <p><code>&lt;script>
+    <br>$(document).ready(funtion() {
+    <br>    $('[data-toggle="tooltip"]').tooltip();
+    <br>});
+    <br>&lt;/script></code></p>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="well">
+                        <h2><a href="javascript:;" data-toggle="tooltip" title="Your hovering abilities are legendary!">Example: Hover over me!</a></h2>
+                    </div>
+                </div>
+            </div>
+            <h4>Positioning</h4>
+            <p>If you want to determine the direction in which your popup will appear, add the following attribute to your <code>&lt;a></code> tag: <code>data-placement=</code> + <code>"top"</code> , <code>"bottom"</code> , <code>"left"</code> , <code>"right"</code>                , or <code>"auto"</code> .</p>
+        </div>
+        <div class="container-fluid" id="popover">
+            <h3>Popover</h3>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p>Popovers are similar to tooltips in that they can appear when you click or hover over a designated link but there are a couple important differences. One, they are bigger and have a white background. Two, they can have a header and
+                        body text. And three, by default they can only be dismissed and activated by clicking on the designated link (though this attribute can be changed). </p>
+                    <h4>How to code a popover</h4>
+                    <p>The coding is nearly identical to how a tooltip is coded, but with three changes:</p>
+                    <ol>
+                        <li>Change <code>tooltip</code> to <code>popover</code> in your <code> &lt;a></code> tag.</li>
+                        <li> Add <code>data-content="Popover body text goes here"</code> in your <code>&lt;a></code> tag attributes.</li>
+                        <li>Change <code>tooltip</code> to <code>popover</code> in your Javascript. (NOTE: There are two instances of this to change.)</li>
+                    </ol>
+                    <h4>Closing the popover</h4>
+                    <p>By default, the popover can only be closed by clicking on the link again. However, there are two additional options:</p>
+                    <ol>
+                        <li>Dismiss by clicking outside the popover:<br>Do this by adding <code>data-trigger="focus" </code> to your <code>&lt;a></code> tag.</li>
+                        <li>Open and dismiss by hovering:<br>Do this by adding <code>data-trigger="hover"</code> to your <code>&lt;a></code> tag.
+                    </ol>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="well" style="color:#000">
+                        <h2><a href="javascript:;" data-toggle="popover" title="Header goes here" data-content="Body goes here">Example:  Click on Me!</a></h2>
+                    </div>
+                    <div class="well" style="color:#000">
+                        <h2><a href="javascript:;" data-toggle="popover" title="Header goes here" data-content="Body goes here" data-trigger="focus">Example:  Click outside!</a></h2>
+                    </div>
+                    <div class="well" style="color:#000">
+                        <h2><a href="javascript:;" data-toggle="popover" title="Header goes here" data-content="Body goes here" data-trigger="hover">Example:  Hover over me!</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="scrollspy">
+            <h3>Scrollspy</h3>
+            <p>A Scrollspy is used to highlight the currently the link or button for the visible section of a page> You can see an example of this by opening the dropdown menu on the right and scrolling through the page. Can you see how the different sections
+                are highlighted?
+            </p>
+            <h4>How to code a scrollspy</h4>
+            <p>There are three attributes that you will need to add to your <code>&lt;body></code> tag.
+                <ol>
+                    <li><code>data-spy="scroll"</code>
+                        <li><code>data-target=".navbar"</code>: you can declare any element as your target, but the most common is the Navbar.</li>
+                        <li><code>data-offset="50px"</code>: this attribute synchronizes the distance from of the screeen and the highlighting of the link. If you have a navbar, then the start of any of your divistions will be around 50px from the top. If
+                            you have a vertical pills setup, then you can decrease the distance (maybe to 20px).</li>
+                </ol>
+                <p>You also need to have your page setup with ids for each of your divs so that the navigation works. </p>
+        </div>
+        <div class="container-fluid" id="affix">
+            <h3>Affix</h3>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p>The Affix attribute will make an element stick to the top or bottom of the page while you are scrolling. It can be applied to a navbar or a sidebar. It can also be used in combination with scrollspy.</p>
+                    <h4>How to code an Affix</h4>
+                    <p>Add <code>data-spy="affix" data-offset-top="(Pixel distance from the top before affix)"</code> to your Navbar or sidebar attributes.</p>
+                    <p>You will also need to add some CSS coding to make everything look just right. </p>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <h4>CSS Settings</h4>
+                    <p>I'm not sure that all of these are necessary, but they don't hurt.</p>
+                    <pre>
+body {
+    position: relative;
+}
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 1 !important;
+}
+.affix ~ .container-fluid {
+  padding-top: 70px;
+}
+.navbar {
+      margin-bottom: 0px;
+}
+</pre>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+
+
+    <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>more widgets</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: auto;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+        
+        #sliderValue #mileageRange {
+            color: #3a3795;
+            border: 0;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>facebook</p>
+        <p><label for="myInput">enter a value :</label>
+            <input id="myInput" name="myInput" value="30" title="Please enter value"></p>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <ul>
+            <li><a href="#tab1">tab1</a></li>
+            <li><a href="#tab2">tab2</a></li>
+            <li><a href="#tab3">tab3</a></li>
+        </ul>
+        <div id="tab1">
+            <p>content1</p>
+        </div>
+        <div id="tab2">
+            <p>content2</p>
+        </div>
+        <div id="tab3">
+            <p>content3</p>
+        </div>
+
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p>microsoft</p>
+
+    </div>
+    <script>
+        $(function() {
+            $("#myInput").spinner({
+                min: 0,
+                max: 100,
+                step: 3
+            });
+            $("#apple").tabs({
+                collapsible: true,
+                event: "mouseover"
+            });
+            $("#apple").tabs().find(".ui-tabs-nav").sortable({
+                    axis: "x"
+                })
+                //$(document).tooltip(); all of tags with title gets tooltip
+            $("#myInput").tooltip({
+                show: {
+                    effect: //"slideDown",
+                        "explode"
+                }
+            });
+        });
+    </script>
+</body>
+
+
+</html>

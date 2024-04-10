@@ -1,0 +1,23 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+.container img{
+    max-width: 100%;
+}
+.container{
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 5px;
+    grid-template-areas:
+         "a b c d "
+         "e f g h"
+         "i j k l"
+         "m n o p";
+}
+.container img:nth-child(8){
+    grid-area: f/f/k/k;
+}

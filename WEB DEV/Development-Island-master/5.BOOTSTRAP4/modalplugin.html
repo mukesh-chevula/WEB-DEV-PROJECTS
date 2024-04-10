@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <title> modalplugin</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <button type="button" class="btn btn-primary" data-target="#myInquiry" data-toggle="modal" data-ordernumber="234">order number :234-Contact us</button>
+        <h4 id="myModalLabel">Thank you!</h4>
+        <div class="modal" id="myInquiry" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="myModalLabel" class="modal-title">Thank you!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="inquiry">Your Inquiry:</label>
+                        <textarea class="form-control" rows="5" id="inquiry"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        /*$("#myInquiry").on('shown.bs.modal', function() {
+                        window.alert('Hello my gorgeous friends');
+                         })
+                        $("#myInquiry").on('show.bs.modal', function() {
+                        window.alert('Hello my gorgeous friends');
+                          })
+                         $("#myInquiry").on('hidden.bs.modal', function() {
+                        window.alert('Hello my gorgeous friends');
+                          })
+                        $("#myInquiry").on('hide.bs.modal', function() {
+                        window.alert('Hello my gorgeous friends');
+                        })*/
+        $("#myInquiry").on('show.bs.modal', function(event) {
+            let button = $(event.relatedTarget);
+            let orderNumber = button.data('ordernumber');
+            $(this).find('#myModalLabel').text('Order number:' + orderNumber);
+        })
+    </script>
+</body>
+
+</html>

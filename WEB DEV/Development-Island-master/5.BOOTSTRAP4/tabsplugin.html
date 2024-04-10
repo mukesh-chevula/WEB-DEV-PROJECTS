@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <title> tabsplugin</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <ul class="nav nav-tabs nav-justified" id="myTabs">
+            <li role="presentation" class="active">
+                <a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-home"></span>home</a>
+            </li>
+            <li role="presentation">
+                <a href="#messages" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span>Message<span class="badge">3</span></a>
+            </li>
+            <li role="presentation">
+                <a href="#notifications" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span>Notifications<span class="badge">6</span></a>
+            </li>
+
+            <li role="presentation">
+                <a href="#contactUs" data-toggle="tab">Contact</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane active fade in" id="home">
+                <p>Home Content.</p>
+                <p>Other Content.</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="tab-pane active fade in" id="contactUs">
+                <p>Home Content.</p>
+                <p>Other Content.</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="tab-pane active fade in" id="messages">
+                <p>Home Content.</p>
+                <p>Other Content.</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="tab-pane active fade in" id="notifications">
+                <p>Home Content.</p>
+                <p>Other Content.</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#myTabs a:last').tab('show');
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function(event) {
+            //    window.alert($(event.relatedTarget).text());
+            window.alert('the active tab is :' + $(event.relatedTarget).text()) + 'the previous one was :' + $(event.target).text();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Social Networks API</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+    <link href="styling.css" rel="stylesheet">
+
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--
+            [if lt IE 9]>
+            [<!endif]
+        -->
+</head>
+
+<body>
+
+    <!-- Facebook code-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+
+    <div class='jumbotron'>
+        <div class='container-fluid'>
+
+            <h1>Join us and build Freedom</h1>
+            <h3>We make freedom, we love freedom, we spread freedom.</h3>
+
+            <!-- Horizontal form -->
+            <form class='form-horizontal'>
+
+                <div class='form-group'>
+                    <div class='col-xs-offset-2 col-xs-8'>
+                        <input type='email' id='email' placeholder='Your Email' class='form-control'>
+                    </div>
+                </div>
+
+                <div class='form-group'>
+                    <div class='col-xs-offset-4 col-md-offset-6 col-xs-4 col-md-6 col-lg-8'>
+                        <input type='submit' id='submit' value='Subscribe' class='btn btn-info btn-lg'>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class='row'>
+
+                <!-- Facebook button -->
+                <div class='col-sm-offset-2 col-xs-4 col-sm-2'>
+                    <div class="fb-like" data-href="https://nikolasarsenis.com" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+
+                <!-- Twitter button -->
+                <div class='col-xs-4 col-sm-2'>
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=%20world">Tweet</a> </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Twitter timeline -->
+    <div>
+        <a class="twitter-timeline" data-lang="en" data-height="600" data-theme="dark" href="https://twitter.com/Learn_OpenDoors" data-chrome='noFooter noBorders' data-tweet-limit='3'>Tweets by
+            @Learn_OpenDoors</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASetqNMX4yRqqMtlUzvMF1BUXcuqPjqyM&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="twitterWidget.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <!--Page1-->
+    <div data-role="page" id="page1" data-theme="a">
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" datatransition="pop" data-icon="home" class="ui-btn-active uistate-persist">Home</a></li>
+                    <li><a href="#page2" datatransition="pop" data-icon="info">About</a></li>
+                    <li><a href="#page3" datatransition="pop" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <a data-role="button" href="#page2" datatransition="flip">Go to page 2</a>
+            <!--dialog link-->
+            <a data-role="button" href="dialog.html" data-transition="slide" data-rel="dialog" datatheme="b">Open Dialog</a>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer</h1>
+        </div>
+
+    </div>
+    <!--Page1-->
+
+
+    <!--Page2-->
+    <div data-role="page" id="page2" data-theme="a">
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" datatransition="pop" data-icon="home">Home</a></li>
+                    <li><a href="#page2" datatransition="pop" data-icon="info" class="ui-btn-active
+ui-state-persist">About</a></li>
+                    <li><a href="#page3" datatransition="pop" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <a data-role="button" href="#page1" datatransition="pop">Go to page 1</a>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer</h1>
+        </div>
+
+    </div>
+    <!--Page2-->
+
+    <!--Page3-->
+    <div data-role="page" id="page3" data-theme="a">
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" datatransition="pop" data-icon="home">Home</a></li>
+                    <li><a href="#page2" datatransition="pop" data-icon="info">About</a></li>
+                    <li><a href="#page3" datatransition="pop" data-icon="mail" class="ui-btn-active uistate-persist">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#" datarole="button">Email</a>
+                    <p>some text some text some text some text some text some text some text some text some text some text</p>
+
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" datarole="button">Live Chat</a>
+                    <p>some text some text some text some text some text some text some text some text some text some text</p>
+
+                </div>
+                <div class="ui-block-c">
+                    <a href="#" datarole="button">Phone</a>
+                    <p>some text some text some text some text some text some text some text some text some text some text</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer</h1>
+        </div>
+
+    </div>
+    <!--Page3-->
+
+
+</body>
+
+</html>

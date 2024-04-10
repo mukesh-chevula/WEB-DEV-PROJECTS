@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    font-size: 24px;
+}
+input,textarea,.shipping select{
+    background-color: rgba(138, 230, 81, 0.7);
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+.details{
+    flex: 3;
+}
+.form-group{
+    display: flex;
+    margin: 1em;
+
+}
+.form-group label{
+    flex: 1;
+    text-align: right;
+    margin-right: 1em;
+}
+.form-group input{
+    flex:3;
+    font-size: 1em;
+}
+.shipping{
+    text-align: center;
+}
+.shipping select{
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+.payment{
+    text-align: center;
+    margin-top: 1em;
+}
+.payment div:nth-child(2){
+    display: flex;
+}
+.payment div:nth-child(2) label{
+    margin-top: 0.5em;
+    flex: 1;
+}
+.checks{
+    margin-top: 1rm;
+    display: flex;
+    text-align: center;
+}
+.checks label{
+    flex: 1;
+}
+.checks label:nth-child(1){
+    order: 2;
+}
+
+.comments{
+    margin: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.comments textarea{
+    flex: 1;
+}
+
+.submit{
+    margin-top: auto;
+    text-align: center;
+
+}
+.submit button{
+    background-color: deepskyblue;
+    width: 100%;
+    color: azure;
+    font-size: 1.7em;
+    border: none;
+}

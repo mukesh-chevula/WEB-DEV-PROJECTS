@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>progressbars</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        #label {
+            position: absolute;
+            left: 45%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox ui-corner-all" id="facebook">
+        <p>facebook</p>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <p>apple</p>
+
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <p>microsoft</p>
+    </div>
+
+    <div id="progress">
+        <div id="label"></div>
+    </div>
+    <button>run</button>
+    <script>
+        $(function() {
+            $("#progress").progressbar({
+                value: 0
+            });
+            var x = 0;
+            $("button").click(function() {
+                $("#label").text("In Progress..!");
+                setTimeout(function() {
+                    var progress = setInterval(function() {
+                        x++;
+                        $("#label").text(x + '%');
+                        $("#progress").progressbar("option", "value", x);
+                        if (x > 99) {
+                            clearInterval(progress);
+                        }
+                    }, 150);
+                }, 1000)
+
+            })
+        });
+    </script>
+</body>
+
+
+</html>

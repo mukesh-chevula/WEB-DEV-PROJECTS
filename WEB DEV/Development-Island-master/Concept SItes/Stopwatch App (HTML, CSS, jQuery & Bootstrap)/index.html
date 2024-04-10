@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the
+head; any other head content must come *after* these tags
+-->
+    <title>Stopwatch App</title>
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <!--Title-->
+    <div class="container-fluid">
+        <div id="header">Stopwatch</div>
+
+        <!--Lap Time-->
+        <div id="lap"><span id="lapminute">00</span>:<span id="lapsecond">00</span>:<span id="lapcentisecond">00</span></div>
+
+        <!--Time-->
+        <div id="time"><span id="timeminute">00</span>:<span id="timesecond">00</span>:<span id="timecentisecond">00</span></div>
+
+        <!--Controls-->
+        <div id="controlsContainer" class="row">
+            <div class="col-xs-2 col-xs-offset-4">
+                <div id="startButton" class="control">
+                    Start
+                </div>
+                <div id="stopButton" class="control">
+                    Stop
+                </div>
+                <div id="resumeButton" class="control">
+                    Play
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="lapButton" class="control">
+                    Lap
+                </div>
+                <div id="resetButton" class="control">
+                    Reset
+                </div>
+            </div>
+        </div>
+
+        <!--Laps-->
+        <div id="laps"></div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="stopwatch.js"></script>
+</body>
+
+</html>

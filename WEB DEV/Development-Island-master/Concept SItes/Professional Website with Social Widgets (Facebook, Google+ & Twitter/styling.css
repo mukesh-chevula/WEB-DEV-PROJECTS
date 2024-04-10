@@ -1,0 +1,31 @@
+/*add font family, background image*/
+
+body {
+    background: url(social-network.jpg) center center fixed;
+    background-size: cover;
+    text-align: center;
+    font-family: Arvo, serif;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron h1,
+h3 {
+    background-color: #00001e;
+    letter-spacing: 2.5px;
+    color: #1df7f9;
+}
+
+.form-horizontal {
+    margin-top: 50px;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.col-sm-2 {
+    margin-bottom: 10px;
+}

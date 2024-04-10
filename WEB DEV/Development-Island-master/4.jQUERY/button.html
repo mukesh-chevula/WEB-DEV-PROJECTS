@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>button</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .bluebox {
+            background-color: #3a3795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+        
+        .yellowbox {
+            background-color: orange;
+            color: rgb(222, 282, 85);
+            height: 100px;
+            width: auto;
+        }
+        
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }
+        
+        .great {
+            background-color: #5a3419;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bluebox ui-corner-all" id="facebook">
+        <div id="checkboxes">
+            <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">Audi</label>
+            <input type="checkbox" id="checkbox2">
+            <label for="checkbox2">BMW</label>
+            <input type="checkbox" id="checkbox3">
+            <label for="checkbox3">Toyota</label>
+        </div>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+        <input type="checkbox" id="myCheckbox">
+        <label for="myCheckbox">Checkbox</label>
+    </div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+        <form>
+            <div id="radioBoxes">
+                <input type="radio" id="radioBox1" name="radioBoxes">
+                <label for="radiobox1">Subaru</label>
+                <input type="radio" id="radioBox2" name="radioBoxes">
+                <label for="radiobox2">mercedes</label>
+                <input type="radio" id="radioBox3" name="radioBoxes">
+                <label for="radiobox3">Nissan</label>
+            </div>
+        </form>
+        <p>
+            <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a>
+        </p>
+    </div>
+    <button id="button1">button1</button>
+    <button id="button2">button2</button>
+    <button id="button3">button3</button>
+
+    <script>
+        $(function() {
+            $("#button1").button();
+            $("#button2").button({
+                icons: {
+                    primary: "ui-icon-folder-open"
+                },
+                text: false
+            });
+            $("#button3").button({
+                icons: {
+                    primary: "ui-icon-mail-closed",
+                    secondary: "ui-icon-caret-1-nw"
+                }
+            });
+            $("#myCheckbox").button();
+            $("#checkboxes").buttonset();
+            $("#radioBoxes").buttonset();
+        });
+    </script>
+</body>
+
+
+</html>
