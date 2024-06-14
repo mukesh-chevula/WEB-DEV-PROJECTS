@@ -1,6 +1,5 @@
 .gitignore
 
-udemy
 
 node_modules
 
@@ -8,3 +7,5 @@ node_modules
 package.json
 
 package-lock.json
+
+2048 game
